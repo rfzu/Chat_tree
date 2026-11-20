@@ -129,6 +129,8 @@
     data.traitRules.forEach(function (rule) {
       var viewerHas = hasTrait(viewer, rule.from);
       if (rule.fromLacks ? viewerHas : !viewerHas) return;
+      var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
+      if (fromAlso.some(function (traitId) { return !hasTrait(viewer, traitId); })) return;
       if (!rule.toAll) {
         var subjectHas = hasTrait(subject, rule.to);
         if (rule.lacks ? subjectHas : !subjectHas) return;
@@ -513,7 +515,10 @@
     addHeading(card, trait.label);
     addText(card, trait.text);
     addHeading(card, "Как влияет");
-    var rules = data.traitRules.filter(function (rule) { return rule.from === trait.id || rule.to === trait.id || rule.toAll && rule.from === trait.id; });
+    var rules = data.traitRules.filter(function (rule) {
+      var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
+      return rule.from === trait.id || rule.to === trait.id || fromAlso.indexOf(trait.id) !== -1 || rule.toAll && rule.from === trait.id;
+    });
     if (!rules.length) addText(card, "На репутацию черта пока не влияет.", "empty");
     rules.forEach(function (rule) { addText(card, ruleSentence(trait, rule)); });
     addHeading(card, "У кого есть");
@@ -559,6 +564,12 @@
     var otherId = rule.from === trait.id ? rule.to : rule.from;
     var other = traitLabel(otherId);
     if (rule.toAll) return "Оценивает каждого другого человека на " + signed(rule.score) + ".";
+    if (rule.fromAlso) {
+      var viewers = [rule.from].concat([].concat(rule.fromAlso));
+      var viewerText = viewers.map(function (id) { return "«" + traitLabel(id) + "»"; }).join(" и ");
+      var target = rule.to === trait.id ? "носителя этой черты" : "носителя черты «" + traitLabel(rule.to) + "»";
+      return "Носитель черт " + viewerText + " оценивает " + target + " на " + signed(rule.score) + ".";
+    }
     if (rule.from === rule.to) return "Носители оценивают друг друга на " + signed(rule.score) + ".";
     if (rule.fromLacks) return "Тот, у кого нет черты «" + traitLabel(rule.from) + "», оценивает носителя черты «" + traitLabel(rule.to) + "» на " + signed(rule.score) + ".";
     if (rule.lacks) return "Носитель черты «" + traitLabel(rule.from) + "» оценивает того, у кого нет черты «" + other + "», на " + signed(rule.score) + ".";

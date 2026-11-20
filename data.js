@@ -17,15 +17,15 @@ window.DATA = {
     { id: "14", number: 14, name: "𝔓𝔞𝔳𝔢𝔩", skills: [], traits: ["boxer", "man"] },
     { id: "15", number: 15, name: "Аня Катана", skills: [], traits: ["girl", "climber"], photo: "photos/15.jpg" },
     { id: "16", number: 16, name: "Рысь 2025", skills: [], traits: ["gym", "man"], photo: "photos/16.jpg" },
-    { id: "17", number: 17, name: "СВД22", skills: [], traits: ["los", "sober", "trve", "metal", "aspid-song", "alt-fan", "satanist"], photo: "photos/17.jpg" },
+    { id: "17", number: 17, name: "СВД22", skills: [], traits: ["los", "sober", "trve", "metal", "aspid-song", "alt-fan", "satanist", "criminal"], photo: "photos/17.jpg" },
     { id: "18", number: 18, name: "Игорь Шаповалов 2", skills: [], traits: ["goth", "humor", "alcoholic", "man", "boxer", "alt-fan"], photo: "photos/18.jpg" },
     { id: "19", number: 19, name: "Гоша", skills: [], traits: ["man"], photo: "photos/19.jpg" },
     { id: "20", number: 20, name: "Семен Скалолаз", skills: [], traits: ["climber", "man"] },
     { id: "21", number: 21, name: "A.M.", skills: [], traits: ["boxer", "climber", "man", "raver", "snow"], photo: "photos/21.png" },
-    { id: "22", number: 22, name: "Дмитрий Воробьёв", skills: [], traits: ["man"] },
+    { id: "22", number: 22, name: "Дмитрий Воробьёв", skills: [], traits: ["man", "fisher"] },
     { id: "23", number: 23, name: "Даша Грим", skills: [], traits: ["girl"] },
     { id: "24", number: 24, name: "Ешка Мутаборова", skills: [], traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka"], photo: "photos/24.jpg" },
-    { id: "25", number: 25, name: "Иконостас Теплицких", skills: [], traits: ["raver"] },
+    { id: "25", number: 25, name: "Иконостас Теплицких", skills: [], traits: ["raver", "criminal"] },
     { id: "26", number: 26, name: "Дмитрий Олегович Славянин", skills: [], traits: ["boxer", "man", "humor"], photo: "photos/26.jpg" },
     { id: "27", number: 27, name: "elderberryblazer Настя девятка", skills: [], traits: ["girl", "goth", "alcoholic"] },
     { id: "28", number: 28, name: "Владислав Андреев Джиза", skills: [], traits: ["metal", "aspid", "liberal", "alcoholic", "boxer", "alt-fan", "man"], photo: "photos/28.png" },
@@ -34,7 +34,7 @@ window.DATA = {
     { id: "31", number: 31, name: "Антиквар", skills: [], traits: ["man", "alcoholic"], photo: "photos/31.jpg" },
     { id: "32", number: 32, name: "Эльвира", skills: [], traits: ["girl", "metal", "aspid-song", "bar-fight"], photo: "photos/32.png" },
     { id: "33", number: 33, name: "Вика Сказка", skills: [], traits: ["girl", "humor", "shashlik"] },
-    { id: "34", number: 34, name: "Даня Daniil", aliases: ["Немец", "Боб"], skills: [], traits: ["man", "raver", "kabinka"], photo: "photos/34.jpg" },
+    { id: "34", number: 34, name: "Даня Daniil", aliases: ["Немец", "Боб"], skills: [], traits: ["man", "raver", "kabinka", "alt-fan"], photo: "photos/34.jpg" },
     { id: "35", number: 35, name: "Миша Здоровяк Дискотека", skills: [], traits: ["goth", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins"], photo: "photos/35.jpg" },
     { id: "36", number: 36, name: "Станислав Прокофьев", skills: [], traits: ["cunni", "man"] },
     { id: "37", number: 37, name: "iLusha", skills: [], traits: ["man", "alcoholic"] },
@@ -74,6 +74,7 @@ window.DATA = {
     { id: "alt", label: "альтуха", text: "Своя тусовка. Альтухи оценивают друг друга на +1." },
     { id: "alt-fan", label: "любитель альтух", text: "Оценивает альтух на +1. Обратно это само не идёт." },
     { id: "goth", label: "гот", text: "Музыкальный жанр. Гот оценивает короля готов на +1. Друг к другу эта черта сама ничего не добавляет. Для Тру это другая музыка: металлист-гот получает от него −1, а не «только металл»." },
+    { id: "fisher", label: "Рыбак", text: "Рыбацкий костюм не нравится готичным девочкам. Каждая девушка-гот оценивает его на −1." },
     { id: "goth-king", label: "король готов", text: "Готы смотрят на него иначе. Каждый гот оценивает короля на +1. Обратно это само не идёт." },
     { id: "offline-goth", label: "Гот без интернета", text: "Гот, у которого нет интернета. Недолюбливает короля готов на −1: тот не может добавить его в Готочат." },
     { id: "humor", label: "чувство юмора", text: "Есть чувство юмора. Такой человек оценивает шутника на +1: шутки заходят." },
@@ -93,6 +94,7 @@ window.DATA = {
     { id: "twins", label: "близнецы", text: "Миша и Вэл настолько похожи, что это буквально один человек." },
     { id: "kabinka", label: "Трое в Кабинке", text: "Телеграм-канал, который вместе ведут Ешка и Даня. Они оценивают друг друга на +1." },
     { id: "boxer", label: "боксер", text: "Боксеры оценивают друг друга на +1." },
+    { id: "criminal", label: "уголовник", text: "Уголовники оценивают друг друга на +1." },
     { id: "alcoholic", label: "алкоголик", text: "Алкоголики оценивают друг друга на +1. Те, кто бросил пить, оценивают алкоголика на −1." },
     { id: "sober", label: "бросил пить", text: "Те, кто бросил, оценивают друг друга на +1 и алкоголиков на −1." },
     { id: "liberal", label: "либераха", text: "Либерахи оценивают друг друга на +1 и патриотов на −1." },
@@ -117,6 +119,7 @@ window.DATA = {
     { from: "alt", to: "alt", score: 1, reason: "альтухи" },
     { from: "alt-fan", to: "alt", score: 1, reason: "любитель альтух" },
     { from: "goth", to: "goth-king", score: 1, reason: "готы уважают короля готов" },
+    { from: "girl", fromAlso: "goth", to: "fisher", score: -1, reason: "рыбацкий костюм не нравится готичным девочкам" },
     { from: "offline-goth", to: "goth-king", score: -1, reason: "не может добавить в Готочат" },
     { from: "humor", to: "joker", score: 1, reason: "шутки зашли" },
     { from: "humor", fromLacks: true, to: "joker", score: -1, reason: "шутки не нравятся" },
@@ -127,6 +130,7 @@ window.DATA = {
     { from: "sober", to: "alcoholic", score: -1, reason: "бросил пить" },
     { from: "liberal", to: "liberal", score: 1, reason: "либерахи" },
     { from: "boxer", to: "boxer", score: 1, reason: "боксеры" },
+    { from: "criminal", to: "criminal", score: 1, reason: "уголовники" },
     { from: "climber", to: "climber", score: 1, reason: "скалолазы" },
     { from: "bulk", to: "bulk", score: 1, reason: "массонабор" },
     { from: "raver", to: "raver", score: 1, reason: "рейверы" },
@@ -185,6 +189,7 @@ window.DATA = {
     { from: "1", to: "7", score: 2, reason: "старые друзья" }
   ],
   bondPerks: [
+    { id: "dating", label: "встречаются", score: 3, text: "Сейчас вместе. В обе стороны +3." },
     { id: "ex-good", label: "расстались хорошо", score: 1, text: "Раньше были вместе и разошлись без войны. В обе стороны +1." },
     { id: "ex-bad", label: "расстались плохо", score: -3, text: "Раньше были вместе и разошлись плохо. В обе стороны −3." }
   ],
@@ -198,6 +203,8 @@ window.DATA = {
   bonds: [
     { a: "57", b: "38", perkId: "ex-bad" },
     { a: "58", b: "18", perkId: "ex-bad" },
-    { a: "59", b: "32", perkId: "ex-bad" }
+    { a: "59", b: "32", perkId: "ex-bad" },
+    { a: "18", b: "45", perkId: "ex-good" },
+    { a: "1", b: "15", perkId: "dating" }
   ]
 };
