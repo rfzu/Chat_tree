@@ -46,7 +46,7 @@ window.DATA = {
     { id: "43", number: 43, name: "𝕷𝖆𝖈𝖍𝖗𝖎𝖒𝖆𝖊", skills: [], traits: [] },
     { id: "44", number: 44, name: "Leonid Teterin", skills: [], traits: ["man"] },
     { id: "45", number: 45, name: "Vera Trish", skills: [], traits: ["girl"] },
-    { id: "46", number: 46, name: "Anna Saturn", skills: [], traits: ["girl", "alcoholic", "bar-fight"] },
+    { id: "46", number: 46, name: "Anna Saturn", skills: [], traits: ["girl", "alcoholic", "metal", "bar-fight"] },
     { id: "47", number: 47, name: "Malvina", skills: [], traits: ["girl", "alt", "raver"] },
     { id: "48", number: 48, name: "Svartur Móður Jarðar", skills: [], traits: [] },
     { id: "49", number: 49, name: "bessnoff", skills: [], traits: [] },
