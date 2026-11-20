@@ -165,7 +165,9 @@ window.DATA = {
     { from: "17", to: "59", score: -1, reason: "троллит" },
     { from: "10", to: "59", score: -1, reason: "звонит по ночам" },
     { from: "32", to: "59", score: -1, reason: "звонит по ночам" },
-    { from: "18", to: "59", score: -1, reason: "недолюбливает" }
+    { from: "18", to: "59", score: -1, reason: "недолюбливает" },
+    { from: "46", to: "55", score: 2, reason: "старые друзья" },
+    { from: "55", to: "46", score: 2, reason: "старые друзья" }
   ],
   bondPerks: [
     { id: "ex-good", label: "расстались хорошо", score: 1, text: "Раньше были вместе и разошлись без войны. В обе стороны +1." },
