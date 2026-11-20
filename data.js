@@ -1,7 +1,7 @@
 window.DATA = {
   actual_count: 59,
   people: [
-    { id: "1", number: 1, name: "Мент", skills: [], traits: ["lovelace", "metal", "aspid", "man"], photo: "photos/1.png" },
+    { id: "1", number: 1, name: "Мент", skills: [], traits: ["lovelace", "metal", "aspid", "alcoholic", "man"], photo: "photos/1.png" },
     { id: "2", number: 2, name: "Black Chameleon", aliases: ["Вика Китай"], skills: [], traits: ["girl", "alt", "los", "raver"], photo: "photos/2.png" },
     { id: "3", number: 3, name: "RaytLean Meow", skills: [], traits: ["alt", "raver"] },
     { id: "4", number: 4, name: "ТЕХ", skills: [], traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage"], photo: "photos/4.jpg" },
@@ -32,7 +32,7 @@ window.DATA = {
     { id: "29", number: 29, name: "Lina", skills: [], traits: ["girl", "bulk"], photo: "photos/29.jpg" },
     { id: "30", number: 30, name: "Ashcrowed", skills: [], traits: [] },
     { id: "31", number: 31, name: "Антиквар", skills: [], traits: ["man", "alcoholic"], photo: "photos/31.jpg" },
-    { id: "32", number: 32, name: "Эльвира", skills: [], traits: ["girl", "metal", "aspid-song"], photo: "photos/32.png" },
+    { id: "32", number: 32, name: "Эльвира", skills: [], traits: ["girl", "metal", "aspid-song", "bar-fight"], photo: "photos/32.png" },
     { id: "33", number: 33, name: "Вика Сказка", skills: [], traits: ["girl", "humor", "shashlik"] },
     { id: "34", number: 34, name: "Даня Daniil", aliases: ["Немец", "Боб"], skills: [], traits: ["man", "raver", "kabinka"], photo: "photos/34.jpg" },
     { id: "35", number: 35, name: "Миша Здоровяк Дискотека", skills: [], traits: ["goth", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins"], photo: "photos/35.jpg" },
@@ -46,7 +46,7 @@ window.DATA = {
     { id: "43", number: 43, name: "𝕷𝖆𝖈𝖍𝖗𝖎𝖒𝖆𝖊", skills: [], traits: [] },
     { id: "44", number: 44, name: "Leonid Teterin", skills: [], traits: ["man"] },
     { id: "45", number: 45, name: "Vera Trish", skills: [], traits: ["girl"] },
-    { id: "46", number: 46, name: "Anna Saturn", skills: [], traits: ["girl", "alcoholic"] },
+    { id: "46", number: 46, name: "Anna Saturn", skills: [], traits: ["girl", "alcoholic", "bar-fight"] },
     { id: "47", number: 47, name: "Malvina", skills: [], traits: ["girl", "alt", "raver"] },
     { id: "48", number: 48, name: "Svartur Móður Jarðar", skills: [], traits: [] },
     { id: "49", number: 49, name: "bessnoff", skills: [], traits: [] },
@@ -95,7 +95,8 @@ window.DATA = {
     { id: "sober", label: "бросил пить", text: "Те, кто бросил, оценивают друг друга на +1 и алкоголиков на −1." },
     { id: "liberal", label: "либераха", text: "Либерахи оценивают друг друга на +1 и патриотов на −1." },
     { id: "patriot", label: "патриот", text: "Либераха оценивает патриота на −1. Обратно это само не идёт." },
-    { id: "cunni", label: "куннилингвист", text: "В глазах каждой девушки у него +1. Его собственный взгляд на девушек эта черта не меняет." }
+    { id: "cunni", label: "куннилингвист", text: "В глазах каждой девушки у него +1. Его собственный взгляд на девушек эта черта не меняет." },
+    { id: "bar-fight", label: "драка в баре", text: "Эльвира и Anna Saturn подрались в баре. Оценивают друг друга на −1." }
   ],
   traitRules: [
     { from: "lovelace", to: "girl", score: 1, reason: "ловелас" },
@@ -131,6 +132,7 @@ window.DATA = {
     { from: "girl", to: "cunni", score: 1, reason: "куннилингвист" },
     { from: "fem", to: "girl", score: 1, reason: "фемка" },
     { from: "fem", to: "man", score: -1, reason: "фемка" },
+    { from: "bar-fight", to: "bar-fight", score: -1, reason: "подрались в баре" },
   ],
   pairs: [
     { from: "17", to: "34", score: -1, reason: "недолюбливает" },
@@ -158,12 +160,12 @@ window.DATA = {
     { from: "18", to: "5", score: 1, reason: "приятель" },
     { from: "8", to: "39", score: 2, reason: "старые друзья" },
     { from: "39", to: "8", score: 2, reason: "старые друзья" },
-    { from: "32", to: "46", score: -1, reason: "подрались в баре" },
-    { from: "46", to: "32", score: -1, reason: "подрались в баре" },
     { from: "57", to: "17", score: 2, reason: "старые друзья" },
     { from: "17", to: "57", score: 2, reason: "старые друзья" },
     { from: "17", to: "59", score: -1, reason: "троллит" },
-    { from: "10", to: "59", score: -1, reason: "звонит по ночам" }
+    { from: "10", to: "59", score: -1, reason: "звонит по ночам" },
+    { from: "32", to: "59", score: -1, reason: "звонит по ночам" },
+    { from: "18", to: "59", score: -1, reason: "недолюбливает" }
   ],
   bondPerks: [
     { id: "ex-good", label: "расстались хорошо", score: 1, text: "Раньше были вместе и разошлись без войны. В обе стороны +1." },
