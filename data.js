@@ -7,7 +7,7 @@ window.DATA = {
     { id: "4", number: 4, name: "ТЕХ", skills: [], traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan"], photo: "photos/4.jpg" },
     { id: "5", number: 5, name: "Киселев", skills: [], traits: ["goth-king", "metal", "man"], photo: "photos/5.jpg" },
     { id: "6", number: 6, name: "Петр Егоровский", skills: [], traits: ["man"] },
-    { id: "7", number: 7, name: "Налари", skills: [], traits: ["sober", "liberal", "girl"], photo: "photos/7.png" },
+    { id: "7", number: 7, name: "Налари", skills: [], traits: ["sober", "liberal", "girl", "wants-birth"], photo: "photos/7.png" },
     { id: "8", number: 8, name: "Вася Шишкин", skills: [], traits: ["goth", "humor", "gym-boss", "los", "patriot", "orthodox", "boxer", "man", "bulk", "metal", "cabbage"], photo: "photos/8.png" },
     { id: "9", number: 9, name: "Евгений", skills: [], traits: ["metal", "man"] },
     { id: "10", number: 10, name: "Дионис Кожин", skills: [], traits: ["joker", "gym", "alcoholic", "patriot", "man", "cabbage"], photo: "photos/10.jpg" },
@@ -100,6 +100,7 @@ window.DATA = {
     { id: "orthodox", label: "православный", text: "Православные оценивают друг друга на +1 и сатанистов на −1." },
     { id: "satanist", label: "сатанист", text: "Сатанисты оценивают друг друга на +1 и православных на −1." },
     { id: "cunni", label: "куннилингвист", text: "В глазах каждой девушки у него +1. Его собственный взгляд на девушек эта черта не меняет." },
+    { id: "wants-birth", label: "хочет рожать", text: "По опросу она единственная девушка, которая хочет рожать. Каждый мужчина оценивает её на +1." },
     { id: "bar-fight", label: "драка в баре", text: "Эльвира и Anna Saturn подрались в баре. Оценивают друг друга на −1." }
   ],
   traitRules: [
@@ -140,6 +141,7 @@ window.DATA = {
     { from: "satanist", to: "satanist", score: 1, reason: "сатанисты" },
     { from: "satanist", to: "orthodox", score: -1, reason: "сатанист" },
     { from: "girl", to: "cunni", score: 1, reason: "куннилингвист" },
+    { from: "man", to: "wants-birth", score: 1, reason: "хочет рожать" },
     { from: "fem", to: "girl", score: 1, reason: "фемка" },
     { from: "fem", to: "man", score: -1, reason: "фемка" },
     { from: "bar-fight", to: "bar-fight", score: -1, reason: "подрались в баре" },
