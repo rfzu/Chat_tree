@@ -28,7 +28,7 @@ window.DATA = {
     { id: "25", number: 25, name: "Иконостас Теплицких", skills: [], traits: ["raver"] },
     { id: "26", number: 26, name: "Дмитрий Олегович Славянин", skills: [], traits: ["boxer", "man", "humor"], photo: "photos/26.jpg" },
     { id: "27", number: 27, name: "elderberryblazer Настя девятка", skills: [], traits: ["girl", "goth", "alcoholic"] },
-    { id: "28", number: 28, name: "Владислав Андреев Джиза", skills: [], traits: ["metal", "aspid", "liberal", "boxer", "man"], photo: "photos/28.png" },
+    { id: "28", number: 28, name: "Владислав Андреев Джиза", skills: [], traits: ["metal", "aspid", "liberal", "alcoholic", "boxer", "man"], photo: "photos/28.png" },
     { id: "29", number: 29, name: "Lina", skills: [], traits: ["girl", "bulk"], photo: "photos/29.jpg" },
     { id: "30", number: 30, name: "Ashcrowed", skills: [], traits: [] },
     { id: "31", number: 31, name: "Антиквар", skills: [], traits: ["man", "alcoholic"], photo: "photos/31.jpg" },
