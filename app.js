@@ -13,7 +13,7 @@
   data.traits.forEach(function (trait) { traitById[trait.id] = trait; });
   data.bondPerks.forEach(function (perk) { bondPerkById[perk.id] = perk; });
 
-  var POSITIONS_KEY = "govtree-positions-v3";
+  var POSITIONS_KEY = "govtree-positions-v4";
   var saved = {};
   try { saved = JSON.parse(localStorage.getItem(POSITIONS_KEY) || "{}"); } catch (error) { saved = {}; }
 
