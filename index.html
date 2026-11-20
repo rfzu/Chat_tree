@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Говнари</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <strong>Говнари</strong>
+    </div>
+    <p class="count" id="count"></p>
+    <div class="search">
+      <input id="search" type="search" placeholder="Найти человека..." autocomplete="off">
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
+    <button type="button" class="ghost" id="filters-btn" aria-expanded="false">Фильтры</button>
+    <div id="filters-menu" class="menu" hidden>
+      <label><input type="checkbox" id="show-traits"> Одобрения по чертам на всей карте</label>
+    </div>
+  </header>
+  <main>
+    <section class="map">
+      <div class="map-head">
+        <h1>Карта связей</h1>
+        <p>Кто с кем и почему</p>
+      </div>
+      <div class="pills" role="tablist">
+        <button type="button" class="pill on" data-filter="all">Все связи</button>
+        <button type="button" class="pill" data-filter="friend">Дружба</button>
+        <button type="button" class="pill" data-filter="like">Симпатия</button>
+        <button type="button" class="pill" data-filter="conflict">Конфликты</button>
+        <label class="pill check"><input type="checkbox" id="show-weak"> Показать слабые связи</label>
+      </div>
+      <div id="graph" aria-label="Граф участников"></div>
+      <ul class="legend">
+        <li><i class="friend"></i> Дружба</li>
+        <li><i class="like"></i> Симпатия</li>
+        <li><i class="conflict"></i> Конфликт</li>
+      </ul>
+      <div class="zoom">
+        <button type="button" id="zoom-out" aria-label="Отдалить">−</button>
+        <span id="zoom-label">100%</span>
+        <button type="button" id="zoom-in" aria-label="Приблизить">+</button>
+        <button type="button" id="zoom-fit">Вписать</button>
+      </div>
+    </section>
+    <aside id="card" aria-live="polite"></aside>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
