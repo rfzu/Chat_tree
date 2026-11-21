@@ -26,7 +26,7 @@ window.DATA = {
     { id: "23", number: 23, name: "Даша Грим", skills: [], traits: ["girl"] },
     { id: "24", number: 24, name: "Ешка Мутаборова", skills: [], traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka"], photo: "photos/24.jpg" },
     { id: "25", number: 25, name: "Иконостас Теплицких", skills: [], traits: ["raver", "criminal"] },
-    { id: "26", number: 26, name: "Дмитрий Олегович Славянин", skills: [], traits: ["boxer", "man", "humor"], photo: "photos/26.jpg" },
+    { id: "26", number: 26, name: "Дмитрий Олегович Славянин", skills: [], traits: ["boxer", "man", "humor", "metal"], photo: "photos/26.jpg" },
     { id: "27", number: 27, name: "elderberryblazer Настя девятка", skills: [], traits: ["girl", "goth", "alcoholic"] },
     { id: "28", number: 28, name: "Владислав Андреев Джиза", skills: [], traits: ["metal", "aspid", "liberal", "alcoholic", "boxer", "alt-fan", "man"], photo: "photos/28.png" },
     { id: "29", number: 29, name: "Lina", skills: [], traits: ["girl", "bulk"], photo: "photos/29.jpg" },
