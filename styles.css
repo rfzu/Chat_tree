@@ -76,6 +76,8 @@ main {
   position: relative;
   min-width: 0;
   min-height: 0;
+  container-type: inline-size;
+  container-name: map;
   background:
     radial-gradient(circle at 50% 45%, rgba(46, 230, 199, 0.05), transparent 42%),
     #0b1220;
@@ -318,11 +320,7 @@ main {
 
 .back { margin: 12px 18px 0; }
 
-@media (max-width: 800px) {
-  .top { display: none; }
-
-  #panel-toggle { display: none; }
-
+@container map (max-width: 1120px) {
   .map-tools {
     display: flex;
     gap: 8px;
@@ -332,7 +330,7 @@ main {
     left: 12px;
   }
 
-  .map-filters, .catalog-open {
+  .map-filters {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -341,7 +339,7 @@ main {
     padding: 0;
   }
 
-  .map-filters svg, .catalog-open svg { display: block; }
+  .map-filters svg { display: block; }
 
   .pills {
     display: none;
@@ -371,6 +369,72 @@ main {
     min-height: 40px;
     text-align: left;
   }
+}
+
+body.page-zoomed .map-tools {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  z-index: 4;
+  top: 12px;
+  left: 12px;
+}
+
+body.page-zoomed .map-filters {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+body.page-zoomed .map-filters svg { display: block; }
+
+body.page-zoomed .pills { display: none; }
+
+body.page-zoomed.filters-open .pills {
+  display: flex;
+  z-index: 4;
+  top: 56px;
+  left: 12px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: min(280px, calc(100% - 24px));
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #2a3b56;
+  border-radius: 14px;
+  background: #121c2e;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+body.page-zoomed.filters-open .pills .pill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .top { display: none; }
+
+  #panel-toggle { display: none; }
+
+  .catalog-open {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+  }
+
+  .catalog-open svg { display: block; }
 
   main { grid-template-columns: 1fr; }
 

@@ -88,9 +88,16 @@
   var narrow = layoutQuery;
   var mapFilters = document.getElementById("map-filters");
 
+  function filtersCompact() {
+    var map = document.querySelector(".map");
+    var scale = window.visualViewport ? window.visualViewport.scale : 1;
+    return narrow.matches || scale > 1.15 || !!(map && map.clientWidth < 1120);
+  }
+
   function setFiltersOpen(open) {
-    document.body.classList.toggle("filters-open", open && narrow.matches);
-    mapFilters.setAttribute("aria-expanded", open && narrow.matches ? "true" : "false");
+    var show = open && filtersCompact();
+    document.body.classList.toggle("filters-open", show);
+    mapFilters.setAttribute("aria-expanded", show ? "true" : "false");
   }
 
   mapFilters.addEventListener("click", function () {
@@ -98,7 +105,7 @@
   });
   document.getElementById("catalog-open").addEventListener("click", showCatalog);
   document.addEventListener("click", function (event) {
-    if (!narrow.matches || !document.body.classList.contains("filters-open")) return;
+    if (!filtersCompact() || !document.body.classList.contains("filters-open")) return;
     if (event.target.closest("#map-filters") || event.target.closest("#pills")) return;
     setFiltersOpen(false);
   });
@@ -139,9 +146,32 @@
     network.fit({ animation: false });
   }
 
-  window.addEventListener("resize", refit);
-  window.addEventListener("load", refit);
-  requestAnimationFrame(refit);
+  function syncPageZoom() {
+    var scale = window.visualViewport ? window.visualViewport.scale : 1;
+    var zoomed = scale > 1.15;
+    var wasZoomed = document.body.classList.contains("page-zoomed");
+    document.body.classList.toggle("page-zoomed", zoomed);
+    if (zoomed && !wasZoomed) setFiltersOpen(false);
+  }
+
+  window.addEventListener("resize", function () {
+    syncPageZoom();
+    refit();
+  });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", function () {
+      syncPageZoom();
+      refit();
+    });
+  }
+  window.addEventListener("load", function () {
+    syncPageZoom();
+    refit();
+  });
+  requestAnimationFrame(function () {
+    syncPageZoom();
+    refit();
+  });
 
   showWeak.addEventListener("change", paintEdges);
   popularOnly.addEventListener("change", function () {
