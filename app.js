@@ -1001,7 +1001,7 @@
     var named = scaleName(level);
     if (named) return named.charAt(0).toUpperCase() + named.slice(1);
     if (level > 0) return "Симпатия";
-    return "Конфликт";
+    return "Неприязнь";
   }
 
   function signed(value) {
@@ -1013,7 +1013,8 @@
     if (value === 5) return "любовь";
     if (value === 4 || value === 3) return "дружба";
     if (value === 0) return "нейтралитет";
-    if (value === -4 || value === -3) return "неприязнь";
+    if (value === -1 || value === -2) return "неприязнь";
+    if (value === -3 || value === -4) return "конфликт";
     if (value === -5) return "враги";
     return "";
   }
