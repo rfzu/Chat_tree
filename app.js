@@ -521,11 +521,13 @@
     var titles = document.createElement("div");
     var name = document.createElement("h2");
     name.textContent = person.name;
-    var meta = document.createElement("p");
-    meta.className = "muted";
-    meta.textContent = "Участник #" + person.number + (person.aliases && person.aliases.length ? " · " + person.aliases.join(", ") : "");
     titles.appendChild(name);
-    titles.appendChild(meta);
+    if (person.aliases && person.aliases.length) {
+      var meta = document.createElement("p");
+      meta.className = "muted";
+      meta.textContent = person.aliases.join(", ");
+      titles.appendChild(meta);
+    }
     head.appendChild(avatar);
     head.appendChild(titles);
     card.appendChild(head);
