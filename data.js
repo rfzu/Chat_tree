@@ -5,7 +5,7 @@ window.DATA = {
     { id: "2", number: 2, name: "Black Chameleon", aliases: ["Вика Китай"], skills: [], traits: ["girl", "alt", "los", "raver"], photo: "photos/2.png" },
     { id: "3", number: 3, name: "RaytLean Meow", skills: [], traits: ["alt", "raver"] },
     { id: "4", number: 4, name: "ТЕХ", skills: [], traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan"], photo: "photos/4.jpg" },
-    { id: "5", number: 5, name: "Киселев", skills: [], traits: ["goth-king", "metal", "man"], photo: "photos/5.jpg" },
+    { id: "5", number: 5, name: "Киселев", skills: [], traits: ["goth-king", "metal", "alcoholic", "man"], photo: "photos/5.jpg" },
     { id: "6", number: 6, name: "Петр Егоровский", skills: [], traits: ["man"] },
     { id: "7", number: 7, name: "Налари", skills: [], traits: ["sober", "liberal", "girl", "wants-birth"], photo: "photos/7.png" },
     { id: "8", number: 8, name: "Вася Шишкин", skills: [], traits: ["goth", "humor", "gym-boss", "los", "patriot", "orthodox", "boxer", "man", "bulk", "metal", "cabbage"], photo: "photos/8.png" },
@@ -186,7 +186,9 @@ window.DATA = {
     { from: "46", to: "55", score: 2, reason: "старые друзья" },
     { from: "55", to: "46", score: 2, reason: "старые друзья" },
     { from: "7", to: "1", score: 2, reason: "старые друзья" },
-    { from: "1", to: "7", score: 2, reason: "старые друзья" }
+    { from: "1", to: "7", score: 2, reason: "старые друзья" },
+    { from: "33", to: "25", score: 2, reason: "старые друзья" },
+    { from: "25", to: "33", score: 2, reason: "старые друзья" }
   ],
   bondPerks: [
     { id: "dating", label: "встречаются", score: 3, text: "Сейчас вместе. В обе стороны +3." },
