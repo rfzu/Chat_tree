@@ -1,10 +1,10 @@
 window.DATA = {
   actual_count: 58,
   people: [
-    { id: "1", number: 1, name: "Мент", traits: ["lovelace", "metal", "aspid", "alcoholic", "alt-fan", "man", "likes-stink"], events: ["shallow-grave"], photo: "photos/1.png" },
+    { id: "1", number: 1, name: "Мент", traits: ["lovelace", "metal", "aspid", "alcoholic", "alt-fan", "man", "likes-stink"], events: ["shallow-grave", "ment-bday"], photo: "photos/1.png" },
     { id: "2", number: 2, name: "Вика Китай", aliases: ["Black Chameleon"], traits: ["girl", "alt", "los", "raver", "likes-dickpics", "airfryer", "gym"], events: ["shallow-grave", "china-trip"], photo: "photos/2.png" },
     { id: "3", number: 3, name: "RaytLean Meow", traits: ["alt", "raver", "driver"] },
-    { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall", "unemployed", "driver"], events: ["gothic-brawl", "shallow-grave", "china-trip"], photo: "photos/4.jpg" },
+    { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall", "unemployed", "driver"], events: ["gothic-brawl", "shallow-grave", "china-trip", "ment-bday"], photo: "photos/4.jpg" },
     { id: "5", number: 5, name: "Андрей Киселев", traits: ["goth-king", "metal", "alcoholic", "man"], events: ["gothic-brawl", "shallow-grave"], photo: "photos/5.jpg" },
     { id: "6", number: 6, name: "Петр Егоровский", traits: ["man"] },
     { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "changed-mind", "unemployed"], events: ["shallow-grave"], photo: "photos/7.png" },
@@ -12,7 +12,7 @@ window.DATA = {
     { id: "9", number: 9, name: "Евгений", traits: ["metal", "man"] },
     { id: "10", number: 10, name: "Дионис Кожин", traits: ["joker", "gym", "alcoholic", "patriot", "man", "cabbage", "troll", "anarchist", "metal"], events: ["gothic-brawl", "shallow-grave", "darkness"], photo: "photos/10.jpg" },
     { id: "11", number: 11, name: "Пророк", traits: ["stalker", "man"] },
-    { id: "12", number: 12, name: "Olga", aliases: ["Оля"], traits: ["girl"], events: ["technotatu"] },
+    { id: "12", number: 12, name: "Olga", aliases: ["Оля"], traits: ["girl", "likes-dickpics", "likes-lovelace"], events: ["technotatu"] },
     { id: "13", number: 13, name: "Александр Ткач", traits: ["stalker", "man", "goth", "gym", "metal", "psychologist", "astrologer", "airfryer"], photo: "photos/13.png" },
     { id: "14", number: 14, name: "𝔓𝔞𝔳𝔢𝔩", traits: ["boxer", "man"] },
     { id: "15", number: 15, name: "Аня Катана", traits: ["girl", "climber"], photo: "photos/15.jpg" },
@@ -28,7 +28,7 @@ window.DATA = {
     { id: "25", number: 25, name: "Иконостас Теплицких", traits: ["raver", "criminal"] },
     { id: "26", number: 26, name: "Дмитрий Олегович Славянин", traits: ["boxer", "man", "humor", "metal", "stalker", "scooter", "driver"], photo: "photos/26.jpg" },
     { id: "27", number: 27, name: "elderberryblazer Настя девятка", traits: ["girl", "goth", "alcoholic"] },
-    { id: "28", number: 28, name: "Владислав Андреев Джиза", traits: ["metal", "aspid", "liberal", "alcoholic", "boxer", "alt-fan", "man", "gym", "mustache"], events: ["shallow-grave"], photo: "photos/28.png" },
+    { id: "28", number: 28, name: "Владислав Андреев Джиза", traits: ["metal", "aspid", "liberal", "alcoholic", "boxer", "alt-fan", "man", "gym", "mustache"], events: ["shallow-grave", "ment-bday"], photo: "photos/28.png" },
     { id: "29", number: 29, name: "Lina", traits: ["girl", "bulk", "airfryer", "alt", "likes-lovelace"], photo: "photos/29.jpg" },
     { id: "30", number: 30, name: "Фрид", traits: ["man", "alcoholic"] },
     { id: "31", number: 31, name: "Антиквар", traits: ["man", "alcoholic"], photo: "photos/31.jpg" },
@@ -38,11 +38,11 @@ window.DATA = {
     { id: "35", number: 35, name: "Миша Здоровяк Дискотека", traits: ["goth", "metal", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins", "troll-hater", "likes-plump", "astrologer", "psychologist", "anarchist"], events: ["gothic-brawl", "shallow-grave", "darkness"], photo: "photos/35.jpg" },
     { id: "36", number: 36, name: "Станислав Прокофьев", traits: ["cunni", "man", "metal", "alcoholic", "psychologist"], events: ["shallow-grave"] },
     { id: "37", number: 37, name: "Илюша", traits: ["man", "alcoholic", "snow"], events: ["shallow-grave", "china-trip"] },
-    { id: "38", number: 38, name: "Бабка Сапья", traits: ["girl", "fem"], events: ["shallow-grave"], photo: "photos/38.jpg" },
+    { id: "38", number: 38, name: "Бабка Сапья", traits: ["girl", "fem"], events: ["shallow-grave", "ment-bday"], photo: "photos/38.jpg" },
     { id: "39", number: 39, name: "Вэл", traits: ["gym", "los", "patriot", "bulk", "man", "metal", "philia", "twins", "orthodox"], photo: "photos/39.png" },
     { id: "40", number: 40, name: "Bastardo Von Morgen", traits: ["man"] },
     { id: "41", number: 41, name: "Dmitriy", traits: ["man"] },
-    { id: "42", number: 42, name: "Kat Пикалова", traits: ["girl", "sober"], photo: "photos/42.jpg" },
+    { id: "42", number: 42, name: "Kat Пикалова", traits: ["girl", "sober"], events: ["ment-bday"], photo: "photos/42.jpg" },
     { id: "43", number: 43, name: "Лакримэ", traits: ["girl", "alcoholic", "goth"], events: ["gothic-brawl"] },
     { id: "44", number: 44, name: "Leonid Teterin", traits: ["man"] },
     { id: "45", number: 45, name: "Vera Trish", traits: ["girl"] },
@@ -198,7 +198,8 @@ window.DATA = {
     { id: "gothic-brawl", label: "Великое готическое побоище", text: "Вечеринка Goths Undead, на которой случилось 8 драк за вечер. После неё основан бойцовский клуб «Лосиная Муха». Кожин недоволен Воеславом на −1: тот ударил. Колос благодарен Андрею Киселеву на +1: тот посвятил его в готы и добавил в чат. Тех благодарен Даше на +1: та отмазала его от ментов." },
     { id: "shallow-grave", label: "Неглубокая Могила", text: "Было очень весело: Тех выпил больше всех и радовал друзей своими перформансами, Миша Здоровяк и Вика Китай нарисовали классный грим, Воеслав пытался подружиться с СВД (безуспешно), Мальвина пила пиво с Техом, Киселев отлучался на концерт для своих подданных, Налари показывала сиськи, Эмерлих соблазняла Мента, и только Игорь грустил над сломанным стулом и упавшим Илюшей. Илюша благодарен Вике Китай на +1: та носила его пьяного. Кожин недоволен Илюшей на −1: тот насрал рядом с его палаткой." },
     { id: "china-trip", label: "Поездка в Китай", text: "Друзьям так понравились эти поездки и то, как Вика переводила, что они стали относиться к ней на +1, а она к ним тоже на +1." },
-    { id: "darkness", label: "Тьма", text: "Фестиваль под Питером, где СВД слушал тру-блэк-метал, а Кожин привёз ему Эльвиру. СВД оценивает Кожина на +1 за то, что тот привёз Эльвиру, и Эльвиру на +1 за то, что она угостила его пивом." }
+    { id: "darkness", label: "Тьма", text: "Фестиваль под Питером, где СВД слушал тру-блэк-метал, а Кожин привёз ему Эльвиру. СВД оценивает Кожина на +1 за то, что тот привёз Эльвиру, и Эльвиру на +1 за то, что она угостила его пивом." },
+    { id: "ment-bday", label: "День рождения Мента", text: "Саша снял огромный дом с бассейном и бильярдом, было очень весело. Сап подралась с Катей Пикаловой: оценивают друг друга на −1. Оля недовольна поведением Сап и оценивает её на −1. Все участники оценивают Мента на +1." }
   ],
   eventRules: [
     { from: "bar-fight", to: "bar-fight", score: -1, reason: "подрались в баре" }
@@ -266,7 +267,14 @@ window.DATA = {
     { from: "2", to: "37", score: 1, reason: "поездка в Китай", event: "china-trip" },
     { from: "10", to: "37", score: -1, reason: "насрал у палатки", event: "shallow-grave" },
     { from: "17", to: "10", score: 1, reason: "привёз Эльвиру", event: "darkness" },
-    { from: "17", to: "32", score: 1, reason: "угостила пивом", event: "darkness" }
+    { from: "17", to: "32", score: 1, reason: "угостила пивом", event: "darkness" },
+    { from: "38", to: "42", score: -1, reason: "подрались на дне рождения", event: "ment-bday" },
+    { from: "42", to: "38", score: -1, reason: "подрались на дне рождения", event: "ment-bday" },
+    { from: "12", to: "38", score: -1, reason: "недовольна поведением", event: "ment-bday" },
+    { from: "4", to: "1", score: 1, reason: "день рождения Мента", event: "ment-bday" },
+    { from: "42", to: "1", score: 1, reason: "день рождения Мента", event: "ment-bday" },
+    { from: "38", to: "1", score: 1, reason: "день рождения Мента", event: "ment-bday" },
+    { from: "28", to: "1", score: 1, reason: "день рождения Мента", event: "ment-bday" }
   ],
   bondPerks: [
     { id: "dating", label: "встречаются", score: 3, text: "Сейчас вместе. В обе стороны +3." },
