@@ -83,7 +83,7 @@ main {
 
 #graph { position: absolute; inset: 0; }
 
-.map-filters { display: none; }
+.map-tools, .map-filters, .catalog-open { display: none; }
 
 .pills {
   position: absolute;
@@ -173,10 +173,18 @@ main {
 }
 
 .icon-btn {
+  display: inline-grid;
+  place-items: center;
   width: 32px;
   height: 32px;
+  padding: 0;
   border-radius: 10px;
 }
+
+.panel-actions { display: flex; gap: 8px; margin-left: auto; }
+
+.rel.catalog-row { grid-template-columns: 1fr auto; }
+.catalog-count { color: #8ea0b8; font-size: 13px; }
 
 .profile-head {
   display: flex;
@@ -315,20 +323,25 @@ main {
 
   #panel-toggle { display: none; }
 
-  .map-filters {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .map-tools {
+    display: flex;
+    gap: 8px;
     position: absolute;
     z-index: 4;
     top: 12px;
     left: 12px;
+  }
+
+  .map-filters, .catalog-open {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 36px;
     height: 36px;
     padding: 0;
   }
 
-  .map-filters svg { display: block; }
+  .map-filters svg, .catalog-open svg { display: block; }
 
   .pills {
     display: none;

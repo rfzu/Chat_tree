@@ -19,11 +19,21 @@
   <button type="button" class="panel-scrim" id="panel-scrim" hidden aria-label="Закрыть карточку"></button>
   <main>
     <section class="map">
-      <button type="button" class="ghost map-filters" id="map-filters" aria-expanded="false" aria-controls="pills" aria-label="Фильтры">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M4 5h16l-6.2 7.2V19l-3.6 1.6v-8.4L4 5z"/>
-        </svg>
-      </button>
+      <div class="map-tools">
+        <button type="button" class="ghost map-filters" id="map-filters" aria-expanded="false" aria-controls="pills" aria-label="Фильтры">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M4 5h16l-6.2 7.2V19l-3.6 1.6v-8.4L4 5z"/>
+          </svg>
+        </button>
+        <button type="button" class="ghost catalog-open" id="catalog-open" aria-label="Особенности и события">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 7h12M8 12h12M8 17h12"/>
+            <circle cx="4" cy="7" r="1.2" fill="currentColor"/>
+            <circle cx="4" cy="12" r="1.2" fill="currentColor"/>
+            <circle cx="4" cy="17" r="1.2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
       <div class="pills" id="pills" role="tablist">
         <button type="button" class="pill on" data-filter="all">Все связи</button>
         <button type="button" class="pill" data-filter="friend">Дружба</button>

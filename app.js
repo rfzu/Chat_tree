@@ -54,6 +54,8 @@
 
   var selectedId = null;
   var view = { type: "empty" };
+  var catalogTab = "traits";
+  var detailFrom = "person";
   var edgeFilter = "all";
   var relationTab = "out";
   var showWeak = document.getElementById("show-weak");
@@ -94,6 +96,7 @@
   mapFilters.addEventListener("click", function () {
     setFiltersOpen(!document.body.classList.contains("filters-open"));
   });
+  document.getElementById("catalog-open").addEventListener("click", showCatalog);
   document.addEventListener("click", function (event) {
     if (!narrow.matches || !document.body.classList.contains("filters-open")) return;
     if (event.target.closest("#map-filters") || event.target.closest("#pills")) return;
@@ -121,11 +124,14 @@
   narrow.addEventListener("change", function () {
     if (!narrow.matches) setFiltersOpen(false);
     if (narrow.matches) showAllLinks();
+    if (narrow.matches && view.type === "catalog") view = { type: "empty" };
+    if (!narrow.matches && view.type === "empty") view = { type: "catalog" };
     setPanel(view.type !== "empty");
     saved = readPositions();
     arrange();
     nodes.update(people.map(function (person) { return nodeOptions(person, person.id === selectedId); }));
     if (narrow.matches) paintEdges();
+    paint();
     refit();
   });
   function refit() {
@@ -140,8 +146,7 @@
   showWeak.addEventListener("change", paintEdges);
   popularOnly.addEventListener("change", function () {
     if (popularOnly.checked && selectedId && !strongCount(byId[selectedId])) {
-      selectedId = null;
-      view = { type: "empty" };
+      restView();
       network.unselectAll();
       paint();
     }
@@ -151,6 +156,7 @@
   });
 
   if (narrow.matches) showAllLinks();
+  if (!narrow.matches) view = { type: "catalog" };
   paintEdges();
   paint();
   loadPhotos();
@@ -424,8 +430,26 @@
     else if (view.type === "event") paintEvent(card, eventById[view.id]);
     else if (view.type === "bond") paintBondPerk(card, bondPerkById[view.id]);
     else if (view.type === "person") paintPerson(card, byId[view.id]);
+    else if (view.type === "catalog") paintCatalog(card);
     else paintEmpty(card);
     setPanel(view.type !== "empty");
+  }
+
+  function restView() {
+    selectedId = null;
+    detailFrom = "person";
+    view = narrow.matches ? { type: "empty" } : { type: "catalog" };
+  }
+
+  function showCatalog() {
+    selectedId = null;
+    detailFrom = "catalog";
+    view = { type: "catalog" };
+    network.unselectAll();
+    paintSelection();
+    paintEdges();
+    setFiltersOpen(false);
+    paint();
   }
 
   function paintEmpty(card) {
@@ -449,14 +473,12 @@
   function paintPerson(card, person) {
     var top = document.createElement("div");
     top.className = "panel-top";
-    top.textContent = "ПРОФИЛЬ УЧАСТНИКА";
-    var close = document.createElement("button");
-    close.type = "button";
-    close.className = "icon-btn";
-    close.setAttribute("data-close", "1");
-    close.setAttribute("aria-label", "Закрыть");
-    close.textContent = "×";
-    top.appendChild(close);
+    top.appendChild(document.createTextNode("ПРОФИЛЬ УЧАСТНИКА"));
+    var actions = document.createElement("div");
+    actions.className = "panel-actions";
+    actions.appendChild(catalogButton());
+    actions.appendChild(closeButton());
+    top.appendChild(actions);
     card.appendChild(top);
 
     var head = document.createElement("div");
@@ -663,15 +685,84 @@
   function panelHeader(label) {
     var top = document.createElement("div");
     top.className = "panel-top";
-    top.textContent = label;
+    top.appendChild(document.createTextNode(label));
+    var actions = document.createElement("div");
+    actions.className = "panel-actions";
+    actions.appendChild(closeButton());
+    top.appendChild(actions);
+    return top;
+  }
+
+  function closeButton() {
     var close = document.createElement("button");
     close.type = "button";
     close.className = "icon-btn";
     close.setAttribute("data-close", "1");
     close.setAttribute("aria-label", "Закрыть");
     close.textContent = "×";
-    top.appendChild(close);
-    return top;
+    return close;
+  }
+
+  function catalogButton() {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "icon-btn";
+    button.setAttribute("data-catalog", "1");
+    button.setAttribute("aria-label", "Особенности и события");
+    button.appendChild(document.querySelector("#catalog-open svg").cloneNode(true));
+    return button;
+  }
+
+  function paintCatalog(card) {
+    var top = document.createElement("div");
+    top.className = "panel-top";
+    top.appendChild(document.createTextNode("КАТАЛОГ"));
+    if (narrow.matches) {
+      var actions = document.createElement("div");
+      actions.className = "panel-actions";
+      actions.appendChild(closeButton());
+      top.appendChild(actions);
+    }
+    card.appendChild(top);
+    var tabs = document.createElement("div");
+    tabs.className = "tabs";
+    tabs.appendChild(catalogTabButton("Особенности", "traits"));
+    tabs.appendChild(catalogTabButton("События", "events"));
+    card.appendChild(tabs);
+    var list = document.createElement("div");
+    list.className = "rel-list";
+    var source = catalogTab === "events" ? data.events : data.traits;
+    source.slice().sort(function (a, b) { return a.label.localeCompare(b.label, "ru"); }).forEach(function (item) {
+      list.appendChild(catalogRow(item));
+    });
+    card.appendChild(list);
+  }
+
+  function catalogTabButton(text, id) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.textContent = text;
+    button.setAttribute("data-catalog-tab", id);
+    if (catalogTab === id) button.className = "on";
+    return button;
+  }
+
+  function catalogRow(item) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "rel catalog-row";
+    button.setAttribute(catalogTab === "events" ? "data-event" : "data-trait", item.id);
+    var name = document.createElement("b");
+    name.textContent = item.label;
+    var count = document.createElement("span");
+    count.className = "catalog-count";
+    var owners = catalogTab === "events"
+      ? people.filter(function (person) { return hasEvent(person, item.id); }).length
+      : people.filter(function (person) { return hasTrait(person, item.id); }).length;
+    count.textContent = String(owners);
+    button.appendChild(name);
+    button.appendChild(count);
+    return button;
   }
 
   function paintOwners(card, owners) {
@@ -708,7 +799,7 @@
     button.type = "button";
     button.className = "link back";
     button.setAttribute("data-back", "1");
-    button.textContent = "К человеку";
+    button.textContent = detailFrom === "catalog" ? "К списку" : "К человеку";
     return button;
   }
 
@@ -745,12 +836,20 @@
       return;
     }
     if (event.target.closest("[data-close]")) {
-      selectedId = null;
-      view = { type: "empty" };
+      restView();
       network.unselectAll();
       paintSelection();
       paintEdges();
-      setPanel(false);
+      paint();
+      return;
+    }
+    if (event.target.closest("[data-catalog]")) {
+      showCatalog();
+      return;
+    }
+    var catalogTabButton = event.target.closest("[data-catalog-tab]");
+    if (catalogTabButton) {
+      catalogTab = catalogTabButton.getAttribute("data-catalog-tab");
       paint();
       return;
     }
@@ -762,18 +861,21 @@
     }
     var traitButton = event.target.closest("[data-trait]");
     if (traitButton) {
+      detailFrom = view.type === "catalog" ? "catalog" : "person";
       view = { type: "trait", id: traitButton.getAttribute("data-trait") };
       paint();
       return;
     }
     var eventButton = event.target.closest("[data-event]");
     if (eventButton) {
+      detailFrom = view.type === "catalog" ? "catalog" : "person";
       view = { type: "event", id: eventButton.getAttribute("data-event") };
       paint();
       return;
     }
     var bondButton = event.target.closest("[data-bond]");
     if (bondButton) {
+      detailFrom = "person";
       view = { type: "bond", id: bondButton.getAttribute("data-bond") };
       paint();
       return;
@@ -783,8 +885,8 @@
       choose(personBtn.getAttribute("data-person"), true);
       return;
     }
-    if (event.target.closest("[data-back]") && selectedId) {
-      view = { type: "person", id: selectedId };
+    if (event.target.closest("[data-back]")) {
+      view = detailFrom === "catalog" || !selectedId ? { type: "catalog" } : { type: "person", id: selectedId };
       paint();
     }
   }
