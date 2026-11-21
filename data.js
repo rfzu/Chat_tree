@@ -2,7 +2,7 @@ window.DATA = {
   actual_count: 57,
   people: [
     { id: "1", number: 1, name: "Мент", traits: ["lovelace", "metal", "aspid", "alcoholic", "alt-fan", "man"], events: ["shallow-grave"], photo: "photos/1.png" },
-    { id: "2", number: 2, name: "Вика Китай", aliases: ["Black Chameleon"], traits: ["girl", "alt", "los", "raver", "likes-dickpics"], events: ["shallow-grave"], photo: "photos/2.png" },
+    { id: "2", number: 2, name: "Вика Китай", aliases: ["Black Chameleon"], traits: ["girl", "alt", "los", "raver", "likes-dickpics", "airfryer", "gym"], events: ["shallow-grave"], photo: "photos/2.png" },
     { id: "3", number: 3, name: "RaytLean Meow", traits: ["alt", "raver"] },
     { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall", "unemployed"], events: ["gothic-brawl", "shallow-grave"], photo: "photos/4.jpg" },
     { id: "5", number: 5, name: "Андрей Киселев", traits: ["goth-king", "metal", "alcoholic", "man"], events: ["gothic-brawl", "shallow-grave"], photo: "photos/5.jpg" },
@@ -24,7 +24,7 @@ window.DATA = {
     { id: "21", number: 21, name: "A.M. Вова", traits: ["boxer", "climber", "man", "raver", "snow", "unemployed"], events: ["shallow-grave"], photo: "photos/21.png" },
     { id: "22", number: 22, name: "Дмитрий Воробьёв", traits: ["man", "fisher"] },
     { id: "23", number: 23, name: "Даша Грим", traits: ["girl", "tall"], events: ["karaoke", "shallow-grave"] },
-    { id: "24", number: 24, name: "Ешка Мутаборова", traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka", "troll", "airfryer", "unemployed"], photo: "photos/24.jpg" },
+    { id: "24", number: 24, name: "Ешка Мутаборова", traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka", "troll", "airfryer", "unemployed", "gym"], photo: "photos/24.jpg" },
     { id: "25", number: 25, name: "Иконостас Теплицких", traits: ["raver", "criminal"] },
     { id: "26", number: 26, name: "Дмитрий Олегович Славянин", traits: ["boxer", "man", "humor", "metal"], photo: "photos/26.jpg" },
     { id: "27", number: 27, name: "elderberryblazer Настя девятка", traits: ["girl", "goth", "alcoholic"] },
@@ -252,6 +252,7 @@ window.DATA = {
     { a: "58", b: "18", perkId: "ex-bad" },
     { a: "59", b: "32", perkId: "ex-bad" },
     { a: "18", b: "45", perkId: "ex-good" },
-    { a: "1", b: "15", perkId: "dating" }
+    { a: "1", b: "15", perkId: "dating" },
+    { a: "2", b: "4", perkId: "ex-good" }
   ]
 };
