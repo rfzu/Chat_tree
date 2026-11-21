@@ -4,13 +4,13 @@ window.DATA = {
     { id: "1", number: 1, name: "Мент", traits: ["lovelace", "metal", "aspid", "alcoholic", "alt-fan", "man"], photo: "photos/1.png" },
     { id: "2", number: 2, name: "Black Chameleon", aliases: ["Вика Китай"], traits: ["girl", "alt", "los", "raver"], photo: "photos/2.png" },
     { id: "3", number: 3, name: "RaytLean Meow", traits: ["alt", "raver"] },
-    { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall"], photo: "photos/4.jpg" },
-    { id: "5", number: 5, name: "Киселев", traits: ["goth-king", "metal", "alcoholic", "man"], photo: "photos/5.jpg" },
+    { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall", "unemployed"], events: ["gothic-brawl"], photo: "photos/4.jpg" },
+    { id: "5", number: 5, name: "Андрей Киселев", traits: ["goth-king", "metal", "alcoholic", "man"], events: ["gothic-brawl"], photo: "photos/5.jpg" },
     { id: "6", number: 6, name: "Петр Егоровский", traits: ["man"] },
-    { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "wants-birth"], photo: "photos/7.png" },
-    { id: "8", number: 8, name: "Вася Шишкин Колос", traits: ["goth", "humor", "gym-boss", "los", "patriot", "orthodox", "boxer", "man", "bulk", "metal", "cabbage", "airfryer"], photo: "photos/8.png" },
+    { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "wants-birth", "unemployed"], photo: "photos/7.png" },
+    { id: "8", number: 8, name: "Вася Шишкин Колос", traits: ["goth", "humor", "gym-boss", "los", "patriot", "orthodox", "boxer", "man", "bulk", "metal", "cabbage", "airfryer", "unemployed"], events: ["gothic-brawl"], photo: "photos/8.png" },
     { id: "9", number: 9, name: "Евгений", traits: ["metal", "man"] },
-    { id: "10", number: 10, name: "Дионис Кожин", traits: ["joker", "gym", "alcoholic", "patriot", "man", "cabbage", "troll"], photo: "photos/10.jpg" },
+    { id: "10", number: 10, name: "Дионис Кожин", traits: ["joker", "gym", "alcoholic", "patriot", "man", "cabbage", "troll"], events: ["gothic-brawl"], photo: "photos/10.jpg" },
     { id: "11", number: 11, name: "Пророк", traits: ["stalker", "man"] },
     { id: "12", number: 12, name: "Olga", aliases: ["Оля"], traits: ["girl"], events: ["technotatu"] },
     { id: "13", number: 13, name: "Александр Ткач", traits: ["stalker", "man"] },
@@ -18,13 +18,13 @@ window.DATA = {
     { id: "15", number: 15, name: "Аня Катана", traits: ["girl", "climber"], photo: "photos/15.jpg" },
     { id: "16", number: 16, name: "Рысь 2025", traits: ["gym", "man", "bulk"], photo: "photos/16.jpg" },
     { id: "17", number: 17, name: "СВД22", traits: ["los", "sober", "trve", "metal", "aspid-song", "alt-fan", "satanist", "criminal", "troll-hater"], photo: "photos/17.jpg" },
-    { id: "18", number: 18, name: "Игорь Шаповалов 2", traits: ["goth", "humor", "alcoholic", "man", "boxer", "alt-fan"], photo: "photos/18.jpg" },
+    { id: "18", number: 18, name: "Игорь Шаповалов 2", traits: ["goth", "humor", "alcoholic", "man", "boxer", "alt-fan"], events: ["gothic-brawl"], photo: "photos/18.jpg" },
     { id: "19", number: 19, name: "Гоша", traits: ["man"], photo: "photos/19.jpg" },
     { id: "20", number: 20, name: "Семен Скалолаз", traits: ["climber", "man"] },
-    { id: "21", number: 21, name: "A.M.", traits: ["boxer", "climber", "man", "raver", "snow"], photo: "photos/21.png" },
+    { id: "21", number: 21, name: "A.M. Вова", traits: ["boxer", "climber", "man", "raver", "snow", "unemployed"], photo: "photos/21.png" },
     { id: "22", number: 22, name: "Дмитрий Воробьёв", traits: ["man", "fisher"] },
-    { id: "23", number: 23, name: "Даша Грим", traits: ["girl", "tall"] },
-    { id: "24", number: 24, name: "Ешка Мутаборова", traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka", "troll", "airfryer"], photo: "photos/24.jpg" },
+    { id: "23", number: 23, name: "Даша Грим", traits: ["girl", "tall"], events: ["karaoke"] },
+    { id: "24", number: 24, name: "Ешка Мутаборова", traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka", "troll", "airfryer", "unemployed"], photo: "photos/24.jpg" },
     { id: "25", number: 25, name: "Иконостас Теплицких", traits: ["raver", "criminal"] },
     { id: "26", number: 26, name: "Дмитрий Олегович Славянин", traits: ["boxer", "man", "humor", "metal"], photo: "photos/26.jpg" },
     { id: "27", number: 27, name: "elderberryblazer Настя девятка", traits: ["girl", "goth", "alcoholic"] },
@@ -32,10 +32,10 @@ window.DATA = {
     { id: "29", number: 29, name: "Lina", traits: ["girl", "bulk", "airfryer"], photo: "photos/29.jpg" },
     { id: "30", number: 30, name: "Ashcrowed", traits: [] },
     { id: "31", number: 31, name: "Антиквар", traits: ["man", "alcoholic"], photo: "photos/31.jpg" },
-    { id: "32", number: 32, name: "Эльвира", traits: ["girl", "metal", "aspid-song"], events: ["bar-fight"], photo: "photos/32.png" },
+    { id: "32", number: 32, name: "Эльвира", traits: ["girl", "metal", "aspid-song"], events: ["bar-fight", "gothic-brawl"], photo: "photos/32.png" },
     { id: "33", number: 33, name: "Вика Сказка", traits: ["girl", "humor"], events: ["shashlik"] },
     { id: "34", number: 34, name: "Даня Daniil", aliases: ["Немец", "Боб"], traits: ["man", "raver", "kabinka", "alt-fan"], photo: "photos/34.jpg" },
-    { id: "35", number: 35, name: "Миша Здоровяк Дискотека", traits: ["goth", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins", "troll-hater", "likes-plump"], photo: "photos/35.jpg" },
+    { id: "35", number: 35, name: "Миша Здоровяк Дискотека", traits: ["goth", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins", "troll-hater", "likes-plump"], events: ["gothic-brawl"], photo: "photos/35.jpg" },
     { id: "36", number: 36, name: "Станислав Прокофьев", traits: ["cunni", "man", "metal", "alcoholic"] },
     { id: "37", number: 37, name: "iLusha", traits: ["man", "alcoholic"] },
     { id: "38", number: 38, name: "Бабка Сапья", traits: ["girl", "fem"], photo: "photos/38.jpg" },
@@ -43,7 +43,7 @@ window.DATA = {
     { id: "40", number: 40, name: "Bastardo Von Morgen", traits: ["man"] },
     { id: "41", number: 41, name: "Dmitriy", traits: ["man"] },
     { id: "42", number: 42, name: "Kat Пикалова", traits: ["girl", "sober"], photo: "photos/42.jpg" },
-    { id: "43", number: 43, name: "𝕷𝖆𝖈𝖍𝖗𝖎𝖒𝖆𝖊", traits: [] },
+    { id: "43", number: 43, name: "𝕷𝖆𝖈𝖍𝖗𝖎𝖒𝖆𝖊", traits: [], events: ["gothic-brawl"] },
     { id: "44", number: 44, name: "Leonid Teterin", traits: ["man"] },
     { id: "45", number: 45, name: "Vera Trish", traits: ["girl"] },
     { id: "46", number: 46, name: "Anna Saturn", traits: ["girl", "alcoholic", "metal"], events: ["bar-fight"] },
@@ -58,8 +58,8 @@ window.DATA = {
     { id: "55", number: 55, name: "Григорий Сухарев", traits: ["gym", "man", "offline-goth", "orthodox"], photo: "photos/55.jpg" },
     { id: "56", number: 56, name: "Word Filter", traits: [] },
     { id: "57", number: 57, name: "Слеер", traits: ["joker", "metal", "man", "satanist"], photo: "photos/57.png" },
-    { id: "58", number: 58, name: "Алиса", traits: ["girl"], photo: "photos/58.png" },
-    { id: "59", number: 59, name: "Воеслав", traits: ["man", "boxer", "metal", "goth"], photo: "photos/59.jpg" }
+    { id: "58", number: 58, name: "Алиса", traits: ["girl"], events: ["karaoke", "gothic-brawl"], photo: "photos/58.png" },
+    { id: "59", number: 59, name: "Воеслав", traits: ["man", "boxer", "metal", "goth"], events: ["gothic-brawl"], photo: "photos/59.jpg" }
   ],
   traits: [
     { id: "girl", label: "девушка", text: "От этой черты считаются ловелас, куннилингвист и фемка. Стоит только там, где пол виден по имени или по словам вроде «рассталась»." },
@@ -107,7 +107,8 @@ window.DATA = {
     { id: "likes-plump", label: "любит пышек", text: "Оценивает девушек с массонабором на +1. Обратно это само не идёт." },
     { id: "tall", label: "высокая", text: "Высокая." },
     { id: "likes-tall", label: "любит высоких", text: "Оценивает высоких на +1. Обратно это само не идёт." },
-    { id: "airfryer", label: "аэрогриль", text: "Купив аэрогриль, вы не можете молчать и всем говорите про свою покупку — это первое правило аэрогрильного клуба." }
+    { id: "airfryer", label: "аэрогриль", text: "Купив аэрогриль, вы не можете молчать и всем говорите про свою покупку — это первое правило аэрогрильного клуба." },
+    { id: "unemployed", label: "безработный", text: "Безработный. На репутацию этот перк сам не влияет." }
   ],
   traitRules: [
     { from: "lovelace", to: "girl", score: 1, reason: "ловелас" },
@@ -161,7 +162,9 @@ window.DATA = {
   events: [
     { id: "bar-fight", label: "драка в баре", text: "Эльвира и Anna Saturn подрались в баре. Оценивают друг друга на −1." },
     { id: "shashlik", label: "шашлыки в Лосинке", text: "Шашлыки в Лосинке. С ТЕХом, Игорем Шаповаловым и Мишей Здоровяком из‑за этого −1." },
-    { id: "technotatu", label: "ТехноТату", text: "Взяла денег, чтобы набить у себя на груди татуировку с Техом, не набила и два года не отдаёт. Слеер оценивает её на −1." }
+    { id: "technotatu", label: "ТехноТату", text: "Взяла денег, чтобы набить у себя на груди татуировку с Техом, не набила и два года не отдаёт. Слеер оценивает её на −1." },
+    { id: "karaoke", label: "караоке войны", text: "Даша и Алиса не поделили очередь в караоке, и разгорелся нешуточный конфликт: тусовка раскололась на несколько частей и образовались новые чаты. Тех помирил участниц, они передумали убивать друг друга, но всё равно недолюбливают. Оценивают друг друга на −2. Алиса благодарна Теху за попытку примирения и оценивает его на +1." },
+    { id: "gothic-brawl", label: "Великое готическое побоище", text: "Вечеринка Goths Undead, на которой случилось 8 драк за вечер. После неё основан бойцовский клуб «Лосиная Муха». Кожин недоволен Воеславом на −1: тот ударил. Колос благодарен Андрею Киселеву на +1: тот посвятил его в готы и добавил в чат." }
   ],
   eventRules: [
     { from: "bar-fight", to: "bar-fight", score: -1, reason: "подрались в баре" }
@@ -207,7 +210,12 @@ window.DATA = {
     { from: "4", to: "50", score: 2, reason: "старые друзья" },
     { from: "50", to: "4", score: 2, reason: "старые друзья" },
     { from: "57", to: "7", score: 2, reason: "влюблен" },
-    { from: "57", to: "12", score: -1, reason: "ТехноТату", event: "technotatu" }
+    { from: "57", to: "12", score: -1, reason: "ТехноТату", event: "technotatu" },
+    { from: "23", to: "58", score: -2, reason: "караоке войны", event: "karaoke" },
+    { from: "58", to: "23", score: -2, reason: "караоке войны", event: "karaoke" },
+    { from: "58", to: "4", score: 1, reason: "помирил после караоке", event: "karaoke" },
+    { from: "10", to: "59", score: -1, reason: "ударил на готическом побоище", event: "gothic-brawl" },
+    { from: "8", to: "5", score: 1, reason: "посвятил в готы", event: "gothic-brawl" }
   ],
   bondPerks: [
     { id: "dating", label: "встречаются", score: 3, text: "Сейчас вместе. В обе стороны +3." },
