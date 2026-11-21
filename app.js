@@ -3,6 +3,7 @@
   var people = data.people;
   var byId = {};
   var traitById = {};
+  var eventById = {};
   var bondPerkById = {};
   var palette = ["#2f8f86", "#3d7ec4", "#7b68d6", "#c4843a", "#3f8f6b", "#8a5cab", "#4d7cae", "#b85c6a"];
   people.forEach(function (person, index) {
@@ -11,11 +12,21 @@
     person.color = palette[index % palette.length];
   });
   data.traits.forEach(function (trait) { traitById[trait.id] = trait; });
+  (data.events || []).forEach(function (item) { eventById[item.id] = item; });
   data.bondPerks.forEach(function (perk) { bondPerkById[perk.id] = perk; });
 
-  var POSITIONS_KEY = "govtree-positions-v4";
-  var saved = {};
-  try { saved = JSON.parse(localStorage.getItem(POSITIONS_KEY) || "{}"); } catch (error) { saved = {}; }
+  var layoutQuery = window.matchMedia("(max-width: 800px)");
+
+  function positionsKey() {
+    return layoutQuery.matches ? "govtree-positions-mobile-v1" : "govtree-positions-v4";
+  }
+
+  function readPositions() {
+    try { return JSON.parse(localStorage.getItem(positionsKey()) || "{}"); }
+    catch (error) { return {}; }
+  }
+
+  var saved = readPositions();
 
   arrange();
 
@@ -45,8 +56,8 @@
   var view = { type: "empty" };
   var edgeFilter = "all";
   var relationTab = "out";
-  var showTraits = document.getElementById("show-traits");
   var showWeak = document.getElementById("show-weak");
+  var popularOnly = document.getElementById("popular-only");
 
   network.on("click", function (params) {
     if (!params.nodes.length) return;
@@ -60,43 +71,88 @@
       byId[id].x = positions[id].x;
       byId[id].y = positions[id].y;
     });
-    localStorage.setItem(POSITIONS_KEY, JSON.stringify(saved));
+    localStorage.setItem(positionsKey(), JSON.stringify(saved));
   });
-  network.on("zoom", updateZoomLabel);
 
   document.getElementById("card").addEventListener("click", onCardClick);
-  document.querySelectorAll(".pill").forEach(function (button) {
+  document.querySelectorAll(".pill[data-filter]").forEach(function (button) {
     button.addEventListener("click", function () {
       edgeFilter = button.getAttribute("data-filter");
-      document.querySelectorAll(".pill").forEach(function (item) { item.classList.toggle("on", item === button); });
+      document.querySelectorAll(".pill[data-filter]").forEach(function (item) { item.classList.toggle("on", item === button); });
       paintEdges();
       paint();
     });
   });
-  document.getElementById("filters-btn").addEventListener("click", function () {
-    var menu = document.getElementById("filters-menu");
-    menu.hidden = !menu.hidden;
-    this.setAttribute("aria-expanded", menu.hidden ? "false" : "true");
+  var narrow = layoutQuery;
+  var mapFilters = document.getElementById("map-filters");
+
+  function setFiltersOpen(open) {
+    document.body.classList.toggle("filters-open", open && narrow.matches);
+    mapFilters.setAttribute("aria-expanded", open && narrow.matches ? "true" : "false");
+  }
+
+  mapFilters.addEventListener("click", function () {
+    setFiltersOpen(!document.body.classList.contains("filters-open"));
   });
-  showTraits.addEventListener("change", paintEdges);
+  document.addEventListener("click", function (event) {
+    if (!narrow.matches || !document.body.classList.contains("filters-open")) return;
+    if (event.target.closest("#map-filters") || event.target.closest("#pills")) return;
+    setFiltersOpen(false);
+  });
+  var panelToggle = document.getElementById("panel-toggle");
+  var panelScrim = document.getElementById("panel-scrim");
+
+  function setPanel(open) {
+    var show = open && narrow.matches && view.type !== "empty";
+    document.body.classList.toggle("panel-open", show);
+    panelToggle.setAttribute("aria-expanded", show ? "true" : "false");
+    panelScrim.hidden = true;
+  }
+
+  panelScrim.addEventListener("click", function () { setPanel(false); });
+  function showAllLinks() {
+    edgeFilter = "all";
+    showWeak.checked = true;
+    document.querySelectorAll(".pill[data-filter]").forEach(function (item) {
+      item.classList.toggle("on", item.getAttribute("data-filter") === "all");
+    });
+  }
+
+  narrow.addEventListener("change", function () {
+    if (!narrow.matches) setFiltersOpen(false);
+    if (narrow.matches) showAllLinks();
+    setPanel(view.type !== "empty");
+    saved = readPositions();
+    arrange();
+    nodes.update(people.map(function (person) { return nodeOptions(person, person.id === selectedId); }));
+    if (narrow.matches) paintEdges();
+    refit();
+  });
+  function refit() {
+    network.redraw();
+    network.fit({ animation: false });
+  }
+
+  window.addEventListener("resize", refit);
+  window.addEventListener("load", refit);
+  requestAnimationFrame(refit);
+
   showWeak.addEventListener("change", paintEdges);
-  document.getElementById("zoom-in").addEventListener("click", function () { zoomBy(1.2); });
-  document.getElementById("zoom-out").addEventListener("click", function () { zoomBy(1 / 1.2); });
-  document.getElementById("zoom-fit").addEventListener("click", function () {
-    network.fit({ animation: { duration: 180 } });
-  });
-  document.getElementById("search").addEventListener("input", onSearch);
-  document.getElementById("search-results").addEventListener("click", function (event) {
-    var button = event.target.closest("[data-person]");
-    if (!button) return;
-    choose(button.getAttribute("data-person"), true);
-    document.getElementById("search").value = "";
-    document.getElementById("search-results").hidden = true;
+  popularOnly.addEventListener("change", function () {
+    if (popularOnly.checked && selectedId && !strongCount(byId[selectedId])) {
+      selectedId = null;
+      view = { type: "empty" };
+      network.unselectAll();
+      paint();
+    }
+    paintEdges();
+    paintSelection();
+    refit();
   });
 
+  if (narrow.matches) showAllLinks();
   paintEdges();
   paint();
-  updateZoomLabel();
   loadPhotos();
 
   function choose(id, focus) {
@@ -107,12 +163,17 @@
     paintEdges();
     network.selectNodes([id]);
     if (focus) network.focus(id, { scale: 1.15, animation: { duration: 180 } });
+    setPanel(true);
     paint();
   }
 
   function hasTrait(person, traitId) {
     if (person.traits.indexOf(traitId) !== -1) return true;
     return traitId === "gym" && person.traits.indexOf("gym-boss") !== -1;
+  }
+
+  function hasEvent(person, eventId) {
+    return (person.events || []).indexOf(eventId) !== -1;
   }
 
   function visibleTraits(person) {
@@ -126,20 +187,8 @@
     var list = [];
     var viewer = byId[fromId];
     var subject = byId[toId];
-    data.traitRules.forEach(function (rule) {
-      var viewerHas = hasTrait(viewer, rule.from);
-      if (rule.fromLacks ? viewerHas : !viewerHas) return;
-      var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
-      if (fromAlso.some(function (traitId) { return !hasTrait(viewer, traitId); })) return;
-      if (!rule.toAll) {
-        var subjectHas = hasTrait(subject, rule.to);
-        if (rule.lacks ? subjectHas : !subjectHas) return;
-        if (rule.alsoHas && !hasTrait(subject, rule.alsoHas)) return;
-        var lacks = rule.alsoLacks ? [].concat(rule.alsoLacks) : [];
-        if (lacks.some(function (traitId) { return hasTrait(subject, traitId); })) return;
-      }
-      list.push({ score: rule.score, reason: rule.reason, kind: "trait" });
-    });
+    applyRules(data.traitRules, hasTrait, "trait");
+    applyRules(data.eventRules || [], hasEvent, "event");
     data.pairs.forEach(function (pair) {
       if (pair.from === fromId && pair.to === toId) list.push({ score: pair.score, reason: pair.reason, kind: "pair" });
     });
@@ -155,6 +204,23 @@
       list.push({ score: note.score, reason: note.text, kind: "pair" });
     });
     return list;
+
+    function applyRules(rules, has, kind) {
+      rules.forEach(function (rule) {
+        var viewerHas = has(viewer, rule.from);
+        if (rule.fromLacks ? viewerHas : !viewerHas) return;
+        var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
+        if (fromAlso.some(function (id) { return !has(viewer, id); })) return;
+        if (!rule.toAll) {
+          var subjectHas = has(subject, rule.to);
+          if (rule.lacks ? subjectHas : !subjectHas) return;
+          if (rule.alsoHas && !has(subject, rule.alsoHas)) return;
+          var lacks = rule.alsoLacks ? [].concat(rule.alsoLacks) : [];
+          if (lacks.some(function (id) { return has(subject, id); })) return;
+        }
+        list.push({ score: rule.score, reason: rule.reason, kind: kind });
+      });
+    }
   }
 
   function relation(fromId, toId) {
@@ -207,10 +273,11 @@
       if (!group.length) continue;
       if (placed && band === 0) y += 160;
       placed = true;
-      var perRow = band === 0 ? 12 : 8;
+      var perRow = layoutQuery.matches ? 4 : (band === 0 ? 12 : 8);
+      var gapX = layoutQuery.matches ? 128 : 168;
+      var rowGap = layoutQuery.matches ? 150 : 210;
       for (var start = 0; start < group.length; start += perRow) {
         var row = group.slice(start, start + perRow);
-        var gapX = 168;
         row.forEach(function (person, index) {
           var stored = saved[person.id];
           if (stored && Number.isFinite(stored.x) && Number.isFinite(stored.y)) {
@@ -221,7 +288,7 @@
           person.x = (index - (row.length - 1) / 2) * gapX;
           person.y = y;
         });
-        y += 210;
+        y += rowGap;
       }
     }
   }
@@ -236,7 +303,8 @@
       size: selected ? Math.round(nodeSize(person) * 1.2) : nodeSize(person),
       color: { background: selected ? "#e39a3a" : person.color, border: "transparent" },
       font: { color: "#ffffff", size: selected ? 16 : 12 },
-      opacity: selectedId && !selected ? 0.55 : 1
+      opacity: selectedId && !selected ? 0.55 : 1,
+      hidden: !!(popularOnly && popularOnly.checked && !strongCount(person))
     };
   }
 
@@ -323,11 +391,12 @@
       people.forEach(function (to) {
         var rel = relation(from.id, to.id);
         if (!passes(rel.level)) return;
+        if (popularOnly.checked && (!strongCount(from) || !strongCount(to))) return;
         var strong = Math.abs(rel.level) >= 3;
         if (!strong && !showWeak.checked) return;
         var touches = selectedId && (from.id === selectedId || to.id === selectedId);
         var solid = structural(rel.parts);
-        if (!strong && !touches && !solid && !showTraits.checked) return;
+        if (!strong && !touches && !solid) return;
         var color = edgeColor(rel.level);
         next.push({
           id: from.id + ">" + to.id,
@@ -352,12 +421,25 @@
     var card = document.getElementById("card");
     card.replaceChildren();
     if (view.type === "trait") paintTrait(card, traitById[view.id]);
+    else if (view.type === "event") paintEvent(card, eventById[view.id]);
     else if (view.type === "bond") paintBondPerk(card, bondPerkById[view.id]);
     else if (view.type === "person") paintPerson(card, byId[view.id]);
     else paintEmpty(card);
+    setPanel(view.type !== "empty");
   }
 
   function paintEmpty(card) {
+    var top = document.createElement("div");
+    top.className = "panel-top sheet-only";
+    top.textContent = "КАРТОЧКА";
+    var close = document.createElement("button");
+    close.type = "button";
+    close.className = "icon-btn";
+    close.setAttribute("data-dismiss", "1");
+    close.setAttribute("aria-label", "Свернуть карточку");
+    close.textContent = "×";
+    top.appendChild(close);
+    card.appendChild(top);
     var box = document.createElement("div");
     box.className = "empty-panel";
     box.textContent = "Выберите человека на карте, чтобы увидеть профиль и оценки.";
@@ -409,13 +491,20 @@
     traits.appendChild(chips);
     card.appendChild(traits);
 
-    var skills = document.createElement("div");
-    skills.className = "block";
-    var skillTitle = document.createElement("h3");
-    skillTitle.textContent = "Скиллы";
-    skills.appendChild(skillTitle);
-    addText(skills, person.skills.length ? person.skills.join(", ") : "Пока не добавлены", person.skills.length ? "" : "empty");
-    card.appendChild(skills);
+    var events = document.createElement("div");
+    events.className = "block";
+    var eventTitle = document.createElement("h3");
+    eventTitle.textContent = "События";
+    events.appendChild(eventTitle);
+    var eventChips = document.createElement("div");
+    eventChips.className = "chips";
+    var shownEvents = person.events || [];
+    if (!shownEvents.length) addText(eventChips, "Пока не добавлены", "empty");
+    shownEvents.forEach(function (eventId) {
+      eventChips.appendChild(chip(eventById[eventId].label, { "data-event": eventId }));
+    });
+    events.appendChild(eventChips);
+    card.appendChild(events);
 
     var bonds = data.bonds.filter(function (bond) { return bond.a === person.id || bond.b === person.id; });
     var notes = (data.notes || []).filter(function (note) { return note.a === person.id || note.b === person.id || note.person === person.id; });
@@ -511,6 +600,7 @@
   }
 
   function paintTrait(card, trait) {
+    card.appendChild(panelHeader("ОСОБЕННОСТЬ"));
     card.appendChild(backButton());
     addHeading(card, trait.label);
     addText(card, trait.text);
@@ -521,14 +611,37 @@
     });
     if (!rules.length) addText(card, "На репутацию черта пока не влияет.", "empty");
     rules.forEach(function (rule) { addText(card, ruleSentence(trait, rule)); });
-    addHeading(card, "У кого есть");
-    var owners = people.filter(function (person) { return hasTrait(person, trait.id); });
-    if (!owners.length) addText(card, "Ни у кого.", "empty");
-    owners.forEach(function (person) {
-      var row = document.createElement("p");
-      row.appendChild(personButton(person.id));
-      card.appendChild(row);
+    paintOwners(card, people.filter(function (person) { return hasTrait(person, trait.id); }));
+  }
+
+  function paintEvent(card, item) {
+    card.appendChild(panelHeader("СОБЫТИЕ"));
+    card.appendChild(backButton());
+    addHeading(card, item.label);
+    addText(card, item.text);
+    addHeading(card, "Как влияет");
+    var rules = (data.eventRules || []).filter(function (rule) {
+      var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
+      return rule.from === item.id || rule.to === item.id || fromAlso.indexOf(item.id) !== -1 || rule.toAll && rule.from === item.id;
     });
+    var linked = data.pairs.filter(function (pair) { return pair.event === item.id; });
+    var told = {};
+    if (!rules.length && !linked.length) addText(card, "На репутацию событие пока не влияет.", "empty");
+    rules.forEach(function (rule) { addText(card, ruleSentence(item, rule)); });
+    linked.forEach(function (pair) {
+      var forward = pair.from + ">" + pair.to;
+      if (told[forward]) return;
+      var back = linked.some(function (other) {
+        return other.from === pair.to && other.to === pair.from && other.score === pair.score;
+      });
+      if (back) told[pair.to + ">" + pair.from] = true;
+      told[forward] = true;
+      var sentence = back
+        ? byId[pair.from].name + " и " + byId[pair.to].name + " оценивают друг друга на " + signed(pair.score) + "."
+        : byId[pair.from].name + " оценивает " + byId[pair.to].name + " на " + signed(pair.score) + ".";
+      addText(card, sentence);
+    });
+    paintOwners(card, people.filter(function (person) { return hasEvent(person, item.id); }));
   }
 
   function paintBondPerk(card, perk) {
@@ -547,6 +660,49 @@
     });
   }
 
+  function panelHeader(label) {
+    var top = document.createElement("div");
+    top.className = "panel-top";
+    top.textContent = label;
+    var close = document.createElement("button");
+    close.type = "button";
+    close.className = "icon-btn";
+    close.setAttribute("data-close", "1");
+    close.setAttribute("aria-label", "Закрыть");
+    close.textContent = "×";
+    top.appendChild(close);
+    return top;
+  }
+
+  function paintOwners(card, owners) {
+    addHeading(card, "У кого есть");
+    if (!owners.length) {
+      addText(card, "Ни у кого.", "empty");
+      return;
+    }
+    var list = document.createElement("div");
+    list.className = "rel-list";
+    owners.forEach(function (person) { list.appendChild(ownerRow(person)); });
+    card.appendChild(list);
+  }
+
+  function ownerRow(person) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "rel";
+    button.setAttribute("data-person", person.id);
+    var mini = document.createElement("span");
+    mini.className = "mini";
+    paintFace(mini, person, true);
+    var text = document.createElement("span");
+    var name = document.createElement("b");
+    name.textContent = person.name;
+    text.appendChild(name);
+    button.appendChild(mini);
+    button.appendChild(text);
+    return button;
+  }
+
   function backButton() {
     var button = document.createElement("button");
     button.type = "button";
@@ -557,7 +713,9 @@
   }
 
   function traitLabel(id) {
-    return traitById[id] ? traitById[id].label : id;
+    if (traitById[id]) return traitById[id].label;
+    if (eventById[id]) return eventById[id].label;
+    return id;
   }
 
   function ruleSentence(trait, rule) {
@@ -582,12 +740,17 @@
   }
 
   function onCardClick(event) {
+    if (event.target.closest("[data-dismiss]")) {
+      setPanel(false);
+      return;
+    }
     if (event.target.closest("[data-close]")) {
       selectedId = null;
       view = { type: "empty" };
       network.unselectAll();
       paintSelection();
       paintEdges();
+      setPanel(false);
       paint();
       return;
     }
@@ -600,6 +763,12 @@
     var traitButton = event.target.closest("[data-trait]");
     if (traitButton) {
       view = { type: "trait", id: traitButton.getAttribute("data-trait") };
+      paint();
+      return;
+    }
+    var eventButton = event.target.closest("[data-event]");
+    if (eventButton) {
+      view = { type: "event", id: eventButton.getAttribute("data-event") };
       paint();
       return;
     }
@@ -618,24 +787,6 @@
       view = { type: "person", id: selectedId };
       paint();
     }
-  }
-
-  function onSearch() {
-    var query = document.getElementById("search").value.trim().toLowerCase();
-    var box = document.getElementById("search-results");
-    box.replaceChildren();
-    if (!query) { box.hidden = true; return; }
-    people.filter(function (person) {
-      if (person.name.toLowerCase().indexOf(query) !== -1) return true;
-      return (person.aliases || []).some(function (alias) { return alias.toLowerCase().indexOf(query) !== -1; });
-    }).slice(0, 8).forEach(function (person) {
-      var button = document.createElement("button");
-      button.type = "button";
-      button.setAttribute("data-person", person.id);
-      button.textContent = person.name;
-      box.appendChild(button);
-    });
-    box.hidden = !box.childElementCount;
   }
 
   function personButton(id) {
@@ -727,12 +878,4 @@
     return "";
   }
 
-  function zoomBy(factor) {
-    var scale = network.getScale() * factor;
-    network.moveTo({ scale: Math.min(2.4, Math.max(0.15, scale)), animation: { duration: 140 } });
-  }
-
-  function updateZoomLabel() {
-    document.getElementById("zoom-label").textContent = Math.round(network.getScale() * 100) + "%";
-  }
-}());
+  }());

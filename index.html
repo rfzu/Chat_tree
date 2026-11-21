@@ -14,27 +14,22 @@
       <strong>Нормисы</strong>
     </div>
     <p class="count" id="count"></p>
-    <div class="search">
-      <input id="search" type="search" placeholder="Найти человека..." autocomplete="off">
-      <div id="search-results" class="search-results" hidden></div>
-    </div>
-    <button type="button" class="ghost" id="filters-btn" aria-expanded="false">Фильтры</button>
-    <div id="filters-menu" class="menu" hidden>
-      <label><input type="checkbox" id="show-traits"> Одобрения по чертам на всей карте</label>
-    </div>
+    <button type="button" class="ghost" id="panel-toggle" aria-expanded="false" aria-controls="card">Карточка</button>
   </header>
+  <button type="button" class="panel-scrim" id="panel-scrim" hidden aria-label="Закрыть карточку"></button>
   <main>
     <section class="map">
-      <div class="map-head">
-        <h1>Карта связей</h1>
-        <p>Кто с кем и почему</p>
-      </div>
-      <div class="pills" role="tablist">
+      <button type="button" class="ghost map-filters" id="map-filters" aria-expanded="false" aria-controls="pills" aria-label="Фильтры">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M4 5h16l-6.2 7.2V19l-3.6 1.6v-8.4L4 5z"/>
+        </svg>
+      </button>
+      <div class="pills" id="pills" role="tablist">
         <button type="button" class="pill on" data-filter="all">Все связи</button>
         <button type="button" class="pill" data-filter="friend">Дружба</button>
-        <button type="button" class="pill" data-filter="like">Симпатия</button>
         <button type="button" class="pill" data-filter="conflict">Конфликты</button>
         <label class="pill check"><input type="checkbox" id="show-weak"> Показать слабые связи</label>
+        <label class="pill check" id="popular-only-label"><input type="checkbox" id="popular-only"> Только популярные</label>
       </div>
       <div id="graph" aria-label="Граф участников"></div>
       <ul class="legend">
@@ -42,12 +37,6 @@
         <li><i class="like"></i> Симпатия</li>
         <li><i class="conflict"></i> Конфликт</li>
       </ul>
-      <div class="zoom">
-        <button type="button" id="zoom-out" aria-label="Отдалить">−</button>
-        <span id="zoom-label">100%</span>
-        <button type="button" id="zoom-in" aria-label="Приблизить">+</button>
-        <button type="button" id="zoom-fit">Вписать</button>
-      </div>
     </section>
     <aside id="card" aria-live="polite"></aside>
   </main>
