@@ -35,7 +35,7 @@ window.DATA = {
     { id: "32", number: 32, name: "Эльвира", traits: ["girl", "metal", "aspid-song", "italian"], events: ["bar-fight", "gothic-brawl", "darkness"], photo: "photos/32.png" },
     { id: "33", number: 33, name: "Вика Сказка", traits: ["girl", "humor"], events: ["shashlik"] },
     { id: "34", number: 34, name: "Даня Daniil", aliases: ["Немец", "Боб"], traits: ["man", "raver", "kabinka", "alt-fan"], events: ["china-trip"], photo: "photos/34.jpg" },
-    { id: "35", number: 35, name: "Миша Здоровяк Дискотека", traits: ["goth", "metal", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins", "troll-hater", "likes-plump", "astrologer", "psychologist", "anarchist"], events: ["gothic-brawl", "shallow-grave"], photo: "photos/35.jpg" },
+    { id: "35", number: 35, name: "Миша Здоровяк Дискотека", traits: ["goth", "metal", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins", "troll-hater", "likes-plump", "astrologer", "psychologist", "anarchist"], events: ["gothic-brawl", "shallow-grave", "darkness"], photo: "photos/35.jpg" },
     { id: "36", number: 36, name: "Станислав Прокофьев", traits: ["cunni", "man", "metal", "alcoholic", "psychologist"], events: ["shallow-grave"] },
     { id: "37", number: 37, name: "Илюша", traits: ["man", "alcoholic", "snow"], events: ["shallow-grave", "china-trip"] },
     { id: "38", number: 38, name: "Бабка Сапья", traits: ["girl", "fem"], events: ["shallow-grave"], photo: "photos/38.jpg" },
