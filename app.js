@@ -204,8 +204,7 @@
   }
 
   function hasTrait(person, traitId) {
-    if (person.traits.indexOf(traitId) !== -1) return true;
-    return traitId === "gym" && person.traits.indexOf("gym-boss") !== -1;
+    return person.traits.indexOf(traitId) !== -1;
   }
 
   function hasEvent(person, eventId) {
@@ -213,9 +212,7 @@
   }
 
   function visibleTraits(person) {
-    var ids = person.traits.slice();
-    if (hasTrait(person, "gym") && ids.indexOf("gym") === -1) ids.splice(ids.indexOf("gym-boss") + 1, 0, "gym");
-    return ids;
+    return person.traits.slice();
   }
 
   function contributions(fromId, toId) {
