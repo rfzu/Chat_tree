@@ -37,7 +37,7 @@ window.DATA = {
     { id: "34", number: 34, name: "Даня", aliases: ["Немец", "Боб"], traits: ["man", "raver", "kabinka", "alt-fan", "grim-founder"], events: ["china-trip"], photo: "photos/34.jpg" },
     { id: "35", number: 35, name: "Миша Здоровяк Дискотека", traits: ["goth", "metal", "gym", "sober", "boxer", "man", "bulk", "snow", "cabbage", "twins", "troll-hater", "likes-plump", "astrologer", "psychologist", "anarchist", "orthodox"], events: ["gothic-brawl", "shallow-grave", "darkness", "shashlik", "stoned-repair"], photo: "photos/35.jpg" },
     { id: "36", number: 36, name: "Станислав Прокофьев", traits: ["cunni", "man", "metal", "alcoholic", "psychologist"], events: ["shallow-grave"] },
-    { id: "37", number: 37, name: "Илюша", traits: ["man", "alcoholic", "snow", "sber"], events: ["shallow-grave", "china-trip"] },
+    { id: "37", number: 37, name: "Илюша", traits: ["man", "alcoholic", "snow", "sber", "raver"], events: ["shallow-grave", "china-trip"] },
     { id: "38", number: 38, name: "Бабка Сапья", traits: ["girl", "fem"], events: ["shallow-grave", "ment-bday"], photo: "photos/38.jpg" },
     { id: "39", number: 39, name: "Вэл", traits: ["gym", "los", "patriot", "man", "metal", "philia", "twins", "orthodox", "goth"], photo: "photos/39.png" },
     { id: "40", number: 40, name: "Bastardo Von Morgen", traits: ["man"] },
