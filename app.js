@@ -666,8 +666,23 @@
       var fromAlsoLacks = rule.fromAlsoLacks ? [].concat(rule.fromAlsoLacks) : [];
       return rule.from === trait.id || rule.to === trait.id || fromAlso.indexOf(trait.id) !== -1 || fromAlsoLacks.indexOf(trait.id) !== -1 || rule.toAll && rule.from === trait.id;
     });
-    if (!rules.length) addText(card, "На репутацию черта пока не влияет.", "empty");
+    var linked = data.pairs.filter(function (pair) { return pair.trait === trait.id; });
+    var told = {};
+    if (!rules.length && !linked.length) addText(card, "На репутацию черта пока не влияет.", "empty");
     rules.forEach(function (rule) { addText(card, ruleSentence(trait, rule)); });
+    linked.forEach(function (pair) {
+      var forward = pair.from + ">" + pair.to;
+      if (told[forward]) return;
+      var back = linked.some(function (other) {
+        return other.from === pair.to && other.to === pair.from && other.score === pair.score;
+      });
+      if (back) told[pair.to + ">" + pair.from] = true;
+      told[forward] = true;
+      var sentence = back
+        ? byId[pair.from].name + " и " + byId[pair.to].name + " оценивают друг друга на " + signed(pair.score) + "."
+        : byId[pair.from].name + " оценивает " + byId[pair.to].name + " на " + signed(pair.score) + ".";
+      addText(card, sentence);
+    });
     paintOwners(card, people.filter(function (person) { return hasTrait(person, trait.id); }));
   }
 

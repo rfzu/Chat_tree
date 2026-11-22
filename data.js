@@ -7,7 +7,7 @@ window.DATA = {
     { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall", "unemployed", "driver"], events: ["gothic-brawl", "shallow-grave", "china-trip", "ment-bday", "shashlik", "apartment-wreck", "ment-ny"], photo: "photos/4.jpg" },
     { id: "5", number: 5, name: "Андрей Киселев", traits: ["goth-king", "metal", "alcoholic", "man"], events: ["gothic-brawl", "shallow-grave", "ment-ny"], photo: "photos/5.jpg" },
     { id: "6", number: 6, name: "Петр Егоровский", traits: ["man"] },
-    { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "unemployed"], events: ["shallow-grave", "ment-ny"], photo: "photos/7.png" },
+    { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "unemployed", "rot-founder"], events: ["shallow-grave", "ment-ny"], photo: "photos/7.png" },
     { id: "8", number: 8, name: "Вася Шишкин Колос", traits: ["goth", "humor", "gym-boss", "los", "patriot", "orthodox", "boxer", "man", "bulk", "metal", "cabbage", "airfryer", "unemployed"], events: ["gothic-brawl","shashlik"], photo: "photos/8.png" },
     { id: "9", number: 9, name: "Евгений", traits: ["metal", "man"] },
     { id: "10", number: 10, name: "Дионис Кожин", traits: ["joker", "gym", "alcoholic", "patriot", "man", "cabbage", "troll", "anarchist", "metal"], events: ["gothic-brawl", "shallow-grave", "darkness"], photo: "photos/10.jpg" },
@@ -125,7 +125,8 @@ window.DATA = {
     { id: "driver", label: "водитель", text: "Оценивает самокатчиков на −1. Обратно это само не идёт." },
     { id: "unwashed", label: "не моется", text: "Все девушки оценивают такого на −1. Обратно это само не идёт." },
     { id: "likes-stink", label: "любит вонь", text: "Оценивает того, кто не моется, на +1. Обратно это само не идёт." },
-    { id: "belyashi", label: "беляши", text: "Белый цвет волос рождает сильную ментальную связь. Оценивают друг друга на +1." }
+    { id: "belyashi", label: "беляши", text: "Белый цвет волос рождает сильную ментальную связь. Оценивают друг друга на +1." },
+    { id: "rot-founder", label: "основатель гнили", text: "Налари основала (или захватила, уже не важно) сообщество «Ядерная Гниль» и была там не очень мудрым, но добрым и весёлым владельцем. Там было весело, пока все не спились, а те, кто не спился, перешли в другие сообщества. Участники этого старого сообщества уважают Налари, а она благодарна им за весёлую компанию: взаимный +1." }
   ],
   traitRules: [
     { from: "lovelace", to: "girl", score: 1, reason: "ловелас" },
@@ -299,7 +300,23 @@ window.DATA = {
     { from: "18", to: "1", score: 1, reason: "Новый год у Мента", event: "ment-ny" },
     { from: "1", to: "18", score: -1, reason: "Новый год у Мента", event: "ment-ny" },
     { from: "28", to: "1", score: 1, reason: "Новый год у Мента", event: "ment-ny" },
-    { from: "1", to: "28", score: -1, reason: "Новый год у Мента", event: "ment-ny" }
+    { from: "1", to: "28", score: -1, reason: "Новый год у Мента", event: "ment-ny" },
+    { from: "7", to: "4", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "4", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "1", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "1", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "35", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "35", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "57", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "57", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "16", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "16", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "34", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "34", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "38", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "38", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "7", to: "42", score: 1, reason: "ядерная гниль", trait: "rot-founder" },
+    { from: "42", to: "7", score: 1, reason: "ядерная гниль", trait: "rot-founder" }
   ],
   bondPerks: [
     { id: "dating", label: "встречаются", score: 3, text: "Сейчас вместе. В обе стороны +3." },
