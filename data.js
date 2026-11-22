@@ -261,6 +261,8 @@ window.DATA = {
     { from: "26", to: "16", score: 2, reason: "старые друзья" },
     { from: "60", to: "49", score: 2, reason: "старые друзья" },
     { from: "49", to: "60", score: 2, reason: "старые друзья" },
+    { from: "14", to: "31", score: 2, reason: "старые друзья" },
+    { from: "31", to: "14", score: 2, reason: "старые друзья" },
     { from: "57", to: "7", score: 2, reason: "влюблен" },
     { from: "57", to: "12", score: -1, reason: "ТехноТату", event: "technotatu" },
     { from: "23", to: "58", score: -2, reason: "караоке войны", event: "karaoke" },
@@ -371,6 +373,7 @@ window.DATA = {
     { a: "59", b: "32", perkId: "ex-bad" },
     { a: "18", b: "45", perkId: "ex-good" },
     { a: "1", b: "15", perkId: "dating" },
+    { a: "12", b: "19", perkId: "dating" },
     { a: "2", b: "4", perkId: "ex-good" }
   ]
 };
