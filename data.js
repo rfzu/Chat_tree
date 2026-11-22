@@ -7,7 +7,7 @@ window.DATA = {
     { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "cabbage", "alt-fan", "troll", "likes-tall", "unemployed", "driver", "metal", "sber"], events: ["gothic-brawl", "shallow-grave", "china-trip", "ment-bday", "shashlik", "apartment-wreck", "ment-ny", "kuryanovo"], photo: "photos/4.jpg" },
     { id: "5", number: 5, name: "Андрей Киселев", aliases: ["Король"], traits: ["goth-king", "metal", "alcoholic", "man"], events: ["gothic-brawl", "shallow-grave", "ment-ny"], photo: "photos/5.jpg" },
     { id: "6", number: 6, name: "Петр Егоровский", traits: ["man"] },
-    { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "unemployed", "rot-founder"], events: ["shallow-grave", "ment-ny"], photo: "photos/7.png" },
+    { id: "7", number: 7, name: "Налари", traits: ["sober", "liberal", "girl", "unemployed", "rot-founder", "likes-lovelace"], events: ["shallow-grave", "ment-ny"], photo: "photos/7.png" },
     { id: "8", number: 8, name: "Вася Шишкин Колос", traits: ["goth", "humor", "gym-boss", "los", "patriot", "orthodox", "boxer", "man", "bulk", "metal", "cabbage", "airfryer", "unemployed"], events: ["gothic-brawl","shashlik"], photo: "photos/8.png" },
     { id: "9", number: 9, name: "Евгений", traits: ["metal", "man"] },
     { id: "10", number: 10, name: "Дионис Кожин", traits: ["joker", "gym", "alcoholic", "patriot", "man", "cabbage", "troll", "anarchist", "metal"], events: ["gothic-brawl", "shallow-grave", "darkness"], photo: "photos/10.jpg" },
