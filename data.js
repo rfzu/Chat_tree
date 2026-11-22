@@ -218,6 +218,8 @@ window.DATA = {
     { from: "4", to: "34", score: 1, reason: "приятель" },
     { from: "34", to: "24", score: 2, reason: "старые друзья" },
     { from: "24", to: "34", score: 2, reason: "старые друзья" },
+    { from: "24", to: "28", score: 2, reason: "старые друзья" },
+    { from: "28", to: "24", score: 2, reason: "старые друзья" },
     { from: "24", to: "4", score: 1, reason: "приятель" },
     { from: "4", to: "24", score: 1, reason: "приятель" },
     { from: "24", to: "18", score: 1, reason: "приятель" },
