@@ -18,7 +18,7 @@
   var layoutQuery = window.matchMedia("(max-width: 800px)");
 
   function positionsKey() {
-    return layoutQuery.matches ? "govtree-positions-mobile-v1" : "govtree-positions-v4";
+    return layoutQuery.matches ? "govtree-positions-mobile-v5" : "govtree-positions-v7";
   }
 
   function readPositions() {
@@ -243,12 +243,27 @@
 
     function applyRules(rules, has, kind) {
       rules.forEach(function (rule) {
+        if (rule.fromAll) {
+          if (!has(subject, rule.to)) return;
+          list.push({ score: rule.score, reason: rule.reason, kind: kind });
+          return;
+        }
         var viewerHas = has(viewer, rule.from);
         if (rule.fromLacks ? viewerHas : !viewerHas) return;
         var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
         if (fromAlso.some(function (id) { return !has(viewer, id); })) return;
         var fromAlsoLacks = rule.fromAlsoLacks ? [].concat(rule.fromAlsoLacks) : [];
         if (fromAlsoLacks.some(function (id) { return has(viewer, id); })) return;
+        if (rule.toWord) {
+          var word = String(rule.toWord).toLowerCase();
+          var named = (subject.traits || []).some(function (id) {
+            var label = traitById[id] && traitById[id].label;
+            return label && label.toLowerCase().indexOf(word) !== -1;
+          });
+          if (!named) return;
+          list.push({ score: rule.score, reason: rule.reason, kind: kind });
+          return;
+        }
         if (!rule.toAll) {
           var subjectHas = has(subject, rule.to);
           if (rule.lacks ? subjectHas : !subjectHas) return;
@@ -271,9 +286,9 @@
 
   function nodeSize(person) {
     var maxWeight = 0;
-    people.forEach(function (item) { maxWeight = Math.max(maxWeight, weight(item)); });
+    people.forEach(function (item) { maxWeight = Math.max(maxWeight, rankWeight(item)); });
     if (!maxWeight) return 16;
-    return Math.round(14 + (weight(person) / maxWeight) * 32);
+    return Math.round(14 + (rankWeight(person) / maxWeight) * 32);
   }
 
   function strongCount(person) {
@@ -289,16 +304,35 @@
     return count;
   }
 
-  function weight(person) {
-    return visibleTraits(person).length + strongCount(person);
+  function rankWeight(person) {
+    var traits = visibleTraits(person).reduce(function (sum, id) {
+      var trait = traitById[id];
+      var label = trait && trait.label ? trait.label.toLowerCase() : "";
+      if (label === "король готов" || label.indexOf("основатель") !== -1) return sum + 7;
+      return sum + 1;
+    }, 0);
+    return traits + strongCount(person);
   }
 
-  function arrange() {
+  function placeRow(row, y, gapX) {
+    row.forEach(function (person, column) {
+      var stored = saved[person.id];
+      if (stored && Number.isFinite(stored.x) && Number.isFinite(stored.y)) {
+        person.x = stored.x;
+        person.y = stored.y;
+        return;
+      }
+      person.x = (column - (row.length - 1) / 2) * gapX;
+      person.y = y;
+    });
+  }
+
+  function arrangeNarrow() {
     var maxWeight = 0;
-    people.forEach(function (person) { maxWeight = Math.max(maxWeight, weight(person)); });
+    people.forEach(function (person) { maxWeight = Math.max(maxWeight, rankWeight(person)); });
     var bands = [[], [], [], [], [], []];
     people.forEach(function (person) {
-      var score = weight(person);
+      var score = rankWeight(person);
       var band = !score || !maxWeight ? 0 : 1 + Math.min(4, Math.floor(((score - 1) / maxWeight) * 5));
       bands[band].push(person);
     });
@@ -306,28 +340,35 @@
     var placed = false;
     for (var band = bands.length - 1; band >= 0; band -= 1) {
       var group = bands[band].sort(function (a, b) {
-        return weight(b) - weight(a) || a.name.localeCompare(b.name, "ru");
+        return rankWeight(b) - rankWeight(a) || a.name.localeCompare(b.name, "ru");
       });
       if (!group.length) continue;
       if (placed && band === 0) y += 160;
       placed = true;
-      var perRow = layoutQuery.matches ? 4 : (band === 0 ? 12 : 8);
-      var gapX = layoutQuery.matches ? 128 : 168;
-      var rowGap = layoutQuery.matches ? 150 : 210;
-      for (var start = 0; start < group.length; start += perRow) {
-        var row = group.slice(start, start + perRow);
-        row.forEach(function (person, index) {
-          var stored = saved[person.id];
-          if (stored && Number.isFinite(stored.x) && Number.isFinite(stored.y)) {
-            person.x = stored.x;
-            person.y = stored.y;
-            return;
-          }
-          person.x = (index - (row.length - 1) / 2) * gapX;
-          person.y = y;
-        });
-        y += rowGap;
+      for (var start = 0; start < group.length; start += 4) {
+        placeRow(group.slice(start, start + 4), y, 128);
+        y += 150;
       }
+    }
+  }
+
+  function arrange() {
+    if (layoutQuery.matches) {
+      arrangeNarrow();
+      return;
+    }
+    var ordered = people.slice().sort(function (a, b) {
+      return rankWeight(b) - rankWeight(a) || a.name.localeCompare(b.name, "ru");
+    });
+    var y = 0;
+    var index = 0;
+    var rowSize = 3;
+    while (index < ordered.length) {
+      var row = ordered.slice(index, index + rowSize);
+      placeRow(row, y, 168);
+      y += 210;
+      index += row.length;
+      rowSize += 1;
     }
   }
 
@@ -664,7 +705,8 @@
     var rules = data.traitRules.filter(function (rule) {
       var fromAlso = rule.fromAlso ? [].concat(rule.fromAlso) : [];
       var fromAlsoLacks = rule.fromAlsoLacks ? [].concat(rule.fromAlsoLacks) : [];
-      return rule.from === trait.id || rule.to === trait.id || fromAlso.indexOf(trait.id) !== -1 || fromAlsoLacks.indexOf(trait.id) !== -1 || rule.toAll && rule.from === trait.id;
+      var word = rule.toWord && trait.label && trait.label.toLowerCase().indexOf(String(rule.toWord).toLowerCase()) !== -1;
+      return rule.from === trait.id || rule.to === trait.id || fromAlso.indexOf(trait.id) !== -1 || fromAlsoLacks.indexOf(trait.id) !== -1 || rule.toAll && rule.from === trait.id || rule.fromAll && rule.to === trait.id || word;
     });
     var linked = data.pairs.filter(function (pair) { return pair.trait === trait.id; });
     var told = {};
@@ -863,6 +905,11 @@
     var otherId = rule.from === trait.id ? rule.to : rule.from;
     var other = traitLabel(otherId);
     if (rule.toAll) return "Оценивает каждого другого человека на " + signed(rule.score) + ".";
+    if (rule.fromAll) return "Каждый оценивает носителя этой черты на " + signed(rule.score) + ". Обратно это само не идёт.";
+    if (rule.toWord) {
+      if (rule.from === trait.id) return "Оценивает каждого основателя на " + signed(rule.score) + ". Обратно это само не идёт.";
+      return "Носитель черты «" + traitLabel(rule.from) + "» оценивает носителя этой черты на " + signed(rule.score) + ". Обратно это само не идёт.";
+    }
     if (rule.fromAlso) {
       var viewers = [rule.from].concat([].concat(rule.fromAlso));
       var viewerText = viewers.map(function (id) { return "«" + traitLabel(id) + "»"; }).join(" и ");
