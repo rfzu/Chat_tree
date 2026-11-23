@@ -249,6 +249,7 @@ window.DATA = {
     { from: "8", to: "39", score: 2, reason: "старые друзья" },
     { from: "39", to: "8", score: 2, reason: "старые друзья" },
     { from: "10", to: "59", score: -1, reason: "звонит по ночам" },
+    { from: "10", to: "59", score: -1, reason: "неприязнь" },
     { from: "32", to: "59", score: -1, reason: "звонит по ночам" },
     { from: "18", to: "59", score: -1, reason: "недолюбливает" },
     { from: "46", to: "55", score: 2, reason: "старые друзья" },
