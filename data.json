@@ -133,7 +133,8 @@
         "girl",
         "unemployed",
         "rot-founder",
-        "likes-lovelace"
+        "likes-lovelace",
+        "twins"
       ],
       "events": [
         "shallow-grave",
@@ -218,7 +219,8 @@
       "traits": [
         "girl",
         "likes-dickpics",
-        "likes-lovelace"
+        "likes-lovelace",
+        "twins"
       ],
       "events": [
         "technotatu"
@@ -1105,7 +1107,7 @@
     {
       "id": "twins",
       "label": "близнецы",
-      "text": "Миша и Вэл настолько похожи, что это буквально один человек."
+      "text": "Миша и Вэл настолько похожи, что это буквально один человек. Налари и Оля тоже одно лицо."
     },
     {
       "id": "kabinka",
