@@ -78,7 +78,6 @@
         "alt-fan",
         "troll",
         "unemployed",
-        "driver",
         "metal",
         "sber"
       ],
@@ -320,7 +319,8 @@
       "events": [
         "shallow-grave",
         "darkness",
-        "ment-ny"
+        "ment-ny",
+        "olegovich-bday"
       ],
       "photo": "photos/17.jpg"
     },
@@ -2969,6 +2969,13 @@
     },
     {
       "from": "18",
+      "to": "26",
+      "score": 1,
+      "reason": "день рождения",
+      "event": "olegovich-bday"
+    },
+    {
+      "from": "17",
       "to": "26",
       "score": 1,
       "reason": "день рождения",
