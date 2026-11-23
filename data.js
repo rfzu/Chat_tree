@@ -42,7 +42,7 @@ window.DATA = {
     { id: "39", number: 39, name: "Вэл", traits: ["gym", "los", "patriot", "man", "metal", "philia", "twins", "orthodox", "goth"], photo: "photos/39.png" },
     { id: "40", number: 40, name: "Bastardo Von Morgen", traits: ["man", "stalker"] },
     { id: "41", number: 41, name: "Dmitriy", traits: ["man", "metal"] },
-    { id: "42", number: 42, name: "Kat Пикалова", traits: ["girl", "sober"], events: ["ment-bday"], photo: "photos/42.jpg" },
+    { id: "42", number: 42, name: "Kat Пикалова", traits: ["girl", "sober", "metal", "gym"], events: ["ment-bday"], photo: "photos/42.jpg" },
     { id: "43", number: 43, name: "Кристина Лакримэ", traits: ["girl", "alcoholic", "goth"], events: ["gothic-brawl"], photo: "photos/43.png" },
     { id: "44", number: 44, name: "Leonid Teterin", traits: ["man"] },
     { id: "45", number: 45, name: "Vera Trish", traits: ["girl", "emo", "alt"], photo: "photos/45.png" },
