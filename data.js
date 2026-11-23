@@ -22,7 +22,7 @@ window.DATA = {
     { id: "19", number: 19, name: "Гоша", traits: ["man", "driver", "astronomer"], photo: "photos/19.jpg" },
     { id: "20", number: 20, name: "Семен Скалолаз", traits: ["climber", "man"], events: ["apartment-wreck"] },
     { id: "21", number: 21, name: "A.M. Вова", traits: ["boxer", "climber", "man", "raver", "snow", "unemployed", "driver", "cabbage"], events: ["shallow-grave", "china-trip"], photo: "photos/21.png" },
-    { id: "22", number: 22, name: "Дмитрий Воробьёв", traits: ["man", "fisher"] },
+    { id: "22", number: 22, name: "Дмитрий Воробьёв", traits: ["man", "fisher", "metal", "stalker", "alcoholic"], photo: "photos/22.png" },
     { id: "23", number: 23, name: "Даша Грим", traits: ["girl", "likes-lovelace"], events: ["karaoke", "shallow-grave", "gothic-brawl"], photo: "photos/23.png" },
     { id: "24", number: 24, name: "Ешка Мутаборова", traits: ["girl", "climber", "metal", "raver", "los", "goth", "kabinka", "troll", "airfryer", "unemployed", "gym", "belyashi", "sber"], events: ["china-trip", "stoned-repair"], photo: "photos/24.jpg" },
     { id: "25", number: 25, name: "Иконостас Теплицких", traits: ["man", "raver", "criminal"] },
