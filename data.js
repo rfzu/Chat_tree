@@ -59,7 +59,7 @@ window.DATA = {
     { id: "58", number: 58, name: "Алиса", traits: ["girl", "slav-expelled", "goth"], events: ["karaoke", "gothic-brawl", "alisa-cafe"], photo: "photos/58.png" },
     { id: "59", number: 59, name: "Воеслав", traits: ["man", "boxer", "metal", "goth", "alcoholic", "slav-expelled"], events: ["gothic-brawl", "shallow-grave", "zabroha_fight", "alisa-cafe"], photo: "photos/59.jpg" },
     { id: "60", number: 60, name: "Вика Гречанка", traits: ["girl", "patriarch", "orthodox", "raver"], events: ["shallow-grave"], photo: "photos/60.png" },
-    { id: "62", number: 62, name: "Маша Шмель", traits: ["girl", "raver", "likes-dickpics", "humor"] }
+    { id: "62", number: 62, name: "Маша Шмель", traits: ["girl", "raver", "likes-dickpics", "humor"], photo: "photos/62.png" }
   ],
   traits: [
     { id: "girl", label: "девушка", text: "От этой черты считаются ловелас, куннилингвист и фемка. Стоит только там, где пол виден по имени или по словам вроде «рассталась»." },
