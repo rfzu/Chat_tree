@@ -907,7 +907,8 @@
         "metal",
         "goth",
         "alcoholic",
-        "slav-expelled"
+        "slav-expelled",
+        "bulk"
       ],
       "events": [
         "gothic-brawl",
@@ -2883,6 +2884,12 @@
       "score": 1,
       "reason": "Grim Party",
       "trait": "grim-founder"
+    },
+    {
+      "from": "57",
+      "to": "38",
+      "score": -1,
+      "reason": "ударила бутылкой"
     }
   ],
   "bondPerks": [
