@@ -660,7 +660,8 @@
       "name": "Бабка Сапья",
       "traits": [
         "girl",
-        "fem"
+        "fem",
+        "snitch"
       ],
       "events": [
         "shallow-grave",
@@ -883,7 +884,8 @@
       "traits": [
         "girl",
         "slav-expelled",
-        "goth"
+        "goth",
+        "snitch"
       ],
       "events": [
         "karaoke",
@@ -1140,6 +1142,11 @@
       "id": "criminal",
       "label": "уголовник",
       "text": "Уголовники оценивают друг друга на +1."
+    },
+    {
+      "id": "snitch",
+      "label": "мусорнулась",
+      "text": "После ссоры или мелкого конфликта может написать заяву, что испортит всем настроение. проявляйте осторожность если будете звать таких людей на массовые мероприятия. От всех уголовников −1."
     },
     {
       "id": "alcoholic",
@@ -1470,6 +1477,12 @@
       "to": "criminal",
       "score": 1,
       "reason": "уголовники"
+    },
+    {
+      "from": "criminal",
+      "to": "snitch",
+      "score": -1,
+      "reason": "мусорнулась"
     },
     {
       "from": "climber",
@@ -2204,20 +2217,6 @@
       "to": "59",
       "score": -1,
       "reason": "кафе с Алисой",
-      "event": "alisa-cafe"
-    },
-    {
-      "from": "25",
-      "to": "58",
-      "score": -1,
-      "reason": "пишет заявы",
-      "event": "alisa-cafe"
-    },
-    {
-      "from": "46",
-      "to": "58",
-      "score": -1,
-      "reason": "пишет заявы",
       "event": "alisa-cafe"
     },
     {
