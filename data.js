@@ -1,7 +1,7 @@
 window.DATA = {
   actual_count: 59,
   people: [
-    { id: "1", number: 1, name: "Мент", traits: ["lovelace", "metal", "aspid", "alcoholic", "alt-fan", "man", "likes-stink"], events: ["shallow-grave", "ment-bday", "ment-ny", "zabroha_fight"], photo: "photos/1.png" },
+    { id: "1", number: 1, name: "Мент", traits: ["lovelace", "metal", "aspid", "alcoholic", "alt-fan", "man", "likes-stink", "gym"], events: ["shallow-grave", "ment-bday", "ment-ny", "zabroha_fight"], photo: "photos/1.png" },
     { id: "2", number: 2, name: "Вика Китай", aliases: ["Black Chameleon"], traits: ["girl", "alt", "los", "raver", "likes-dickpics", "airfryer", "gym", "astronomer"], events: ["shallow-grave", "china-trip"], photo: "photos/2.png" },
     { id: "3", number: 3, name: "Алина", traits: ["alt", "raver", "driver", "girl"], photo: "photos/3.png" },
     { id: "4", number: 4, name: "ТЕХ", traits: ["goth", "humor", "gym", "los", "boxer", "climber", "man", "bulk", "raver", "snow", "alt-fan", "troll", "unemployed", "driver", "metal", "sber"], events: ["gothic-brawl", "shallow-grave", "china-trip", "ment-bday", "shashlik", "apartment-wreck", "ment-ny", "zabroha_fight"], photo: "photos/4.jpg" },
