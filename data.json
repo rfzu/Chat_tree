@@ -260,7 +260,8 @@
         "metal",
         "aspid-fan",
         "boxer",
-        "fencer"
+        "fencer",
+        "anime"
       ],
       "events": [
         "gothic-brawl",
@@ -344,7 +345,8 @@
       "traits": [
         "man",
         "driver",
-        "astronomer"
+        "astronomer",
+        "anime"
       ],
       "photo": "photos/19.jpg"
     },
@@ -354,11 +356,18 @@
       "name": "Семен Скалолаз",
       "traits": [
         "climber",
-        "man"
+        "man",
+        "bulk",
+        "philia",
+        "patriot",
+        "raver",
+        "sber",
+        "humor"
       ],
       "events": [
         "apartment-wreck"
-      ]
+      ],
+      "photo": "photos/20.png"
     },
     {
       "id": "21",
@@ -702,7 +711,8 @@
         "girl",
         "sober",
         "metal",
-        "gym"
+        "gym",
+        "anime"
       ],
       "events": [
         "ment-bday"
@@ -990,6 +1000,11 @@
       "id": "emo",
       "label": "эмо",
       "text": "Эмо оценивают друг друга на +1."
+    },
+    {
+      "id": "anime",
+      "label": "аниме",
+      "text": "Оценивают друг друга на +1."
     },
     {
       "id": "alt-fan",
@@ -1479,6 +1494,12 @@
       "to": "emo",
       "score": 1,
       "reason": "эмо"
+    },
+    {
+      "from": "anime",
+      "to": "anime",
+      "score": 1,
+      "reason": "аниме"
     },
     {
       "from": "kabinka",
