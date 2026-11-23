@@ -13,7 +13,8 @@
         "alt-fan",
         "man",
         "likes-stink",
-        "gym"
+        "gym",
+        "dacha"
       ],
       "events": [
         "shallow-grave",
@@ -362,7 +363,8 @@
         "patriot",
         "raver",
         "sber",
-        "humor"
+        "humor",
+        "dacha"
       ],
       "events": [
         "apartment-wreck"
@@ -492,7 +494,8 @@
         "alt-fan",
         "man",
         "gym",
-        "mustache"
+        "mustache",
+        "dacha"
       ],
       "events": [
         "shallow-grave",
@@ -1132,6 +1135,11 @@
       "id": "censorship",
       "label": "цензура",
       "text": "Постоянно пользуется админ ресурсом и удаляет про себя [данные удалены] и про то что он [данные удалены]. Помогает это не особо."
+    },
+    {
+      "id": "dacha",
+      "label": "дача",
+      "text": "Дача. На репутацию этот перк сам не влияет."
     },
     {
       "id": "sber",
