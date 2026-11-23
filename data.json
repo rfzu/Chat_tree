@@ -1,0 +1,2901 @@
+{
+  "actual_count": 59,
+  "people": [
+    {
+      "id": "1",
+      "number": 1,
+      "name": "Мент",
+      "traits": [
+        "lovelace",
+        "metal",
+        "aspid",
+        "alcoholic",
+        "alt-fan",
+        "man",
+        "likes-stink",
+        "gym"
+      ],
+      "events": [
+        "shallow-grave",
+        "ment-bday",
+        "ment-ny",
+        "zabroha_fight"
+      ],
+      "photo": "photos/1.png"
+    },
+    {
+      "id": "2",
+      "number": 2,
+      "name": "Вика Китай",
+      "aliases": [
+        "Black Chameleon"
+      ],
+      "traits": [
+        "girl",
+        "alt",
+        "los",
+        "raver",
+        "likes-dickpics",
+        "airfryer",
+        "gym",
+        "astronomer"
+      ],
+      "events": [
+        "shallow-grave",
+        "china-trip"
+      ],
+      "photo": "photos/2.png"
+    },
+    {
+      "id": "3",
+      "number": 3,
+      "name": "Алина",
+      "traits": [
+        "alt",
+        "raver",
+        "driver",
+        "girl"
+      ],
+      "photo": "photos/3.png"
+    },
+    {
+      "id": "4",
+      "number": 4,
+      "name": "ТЕХ",
+      "traits": [
+        "goth",
+        "humor",
+        "gym",
+        "los",
+        "boxer",
+        "climber",
+        "man",
+        "bulk",
+        "raver",
+        "snow",
+        "alt-fan",
+        "troll",
+        "unemployed",
+        "driver",
+        "metal",
+        "sber"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shallow-grave",
+        "china-trip",
+        "ment-bday",
+        "shashlik",
+        "apartment-wreck",
+        "ment-ny",
+        "zabroha_fight"
+      ],
+      "photo": "photos/4.jpg"
+    },
+    {
+      "id": "5",
+      "number": 5,
+      "name": "Андрей Киселев",
+      "aliases": [
+        "Король"
+      ],
+      "traits": [
+        "goth-king",
+        "metal",
+        "alcoholic",
+        "man"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shallow-grave",
+        "ment-ny"
+      ],
+      "photo": "photos/5.jpg"
+    },
+    {
+      "id": "6",
+      "number": 6,
+      "name": "Петр Егоровский",
+      "traits": [
+        "man",
+        "cook",
+        "raver"
+      ]
+    },
+    {
+      "id": "7",
+      "number": 7,
+      "name": "Налари",
+      "traits": [
+        "sober",
+        "liberal",
+        "girl",
+        "unemployed",
+        "rot-founder",
+        "likes-lovelace"
+      ],
+      "events": [
+        "shallow-grave",
+        "ment-ny"
+      ],
+      "photo": "photos/7.png"
+    },
+    {
+      "id": "8",
+      "number": 8,
+      "name": "Вася Шишкин Колос",
+      "traits": [
+        "goth",
+        "humor",
+        "gym-boss",
+        "gym",
+        "los",
+        "patriot",
+        "orthodox",
+        "boxer",
+        "man",
+        "bulk",
+        "metal",
+        "cabbage",
+        "airfryer",
+        "unemployed",
+        "cook"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shashlik"
+      ],
+      "photo": "photos/8.png"
+    },
+    {
+      "id": "9",
+      "number": 9,
+      "name": "Евгений",
+      "traits": [
+        "metal",
+        "man"
+      ]
+    },
+    {
+      "id": "10",
+      "number": 10,
+      "name": "Дионис Кожин",
+      "traits": [
+        "joker",
+        "gym",
+        "alcoholic",
+        "patriot",
+        "man",
+        "cabbage",
+        "troll",
+        "anarchist",
+        "metal"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shallow-grave",
+        "darkness"
+      ],
+      "photo": "photos/10.jpg"
+    },
+    {
+      "id": "11",
+      "number": 11,
+      "name": "Пророк",
+      "traits": [
+        "stalker",
+        "man"
+      ]
+    },
+    {
+      "id": "12",
+      "number": 12,
+      "name": "Olga",
+      "aliases": [
+        "Оля"
+      ],
+      "traits": [
+        "girl",
+        "likes-dickpics",
+        "likes-lovelace"
+      ],
+      "events": [
+        "technotatu"
+      ],
+      "photo": "photos/12.png"
+    },
+    {
+      "id": "13",
+      "number": 13,
+      "name": "Александр Ткач",
+      "traits": [
+        "stalker",
+        "man",
+        "goth",
+        "gym",
+        "metal",
+        "psychologist",
+        "astrologer",
+        "airfryer",
+        "photographer"
+      ],
+      "photo": "photos/13.png"
+    },
+    {
+      "id": "14",
+      "number": 14,
+      "name": "𝔓𝔞𝔳𝔢𝔩",
+      "traits": [
+        "boxer",
+        "man"
+      ]
+    },
+    {
+      "id": "15",
+      "number": 15,
+      "name": "Аня Катана",
+      "traits": [
+        "girl",
+        "climber",
+        "metal",
+        "aspid-fan",
+        "boxer",
+        "fencer"
+      ],
+      "events": [
+        "gothic-brawl",
+        "apartment-wreck"
+      ],
+      "photo": "photos/15.jpg"
+    },
+    {
+      "id": "16",
+      "number": 16,
+      "name": "Рысь",
+      "traits": [
+        "gym",
+        "man",
+        "bulk",
+        "sends-dickpics",
+        "stalker",
+        "scooter"
+      ],
+      "events": [
+        "ment-ny"
+      ],
+      "photo": "photos/16.jpg"
+    },
+    {
+      "id": "17",
+      "number": 17,
+      "name": "СВД",
+      "traits": [
+        "man",
+        "los",
+        "sober",
+        "trve",
+        "metal",
+        "aspid-song",
+        "aspid-fan",
+        "alt-fan",
+        "troll-hater",
+        "psychologist",
+        "censorship"
+      ],
+      "events": [
+        "shallow-grave",
+        "darkness",
+        "ment-ny"
+      ],
+      "photo": "photos/17.jpg"
+    },
+    {
+      "id": "18",
+      "number": 18,
+      "name": "Игорь Шаповалов",
+      "traits": [
+        "goth",
+        "humor",
+        "alcoholic",
+        "man",
+        "boxer",
+        "alt-fan",
+        "italian",
+        "driver",
+        "scooter",
+        "belyashi",
+        "sber",
+        "slav-founder"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shallow-grave",
+        "shashlik",
+        "stoned-repair",
+        "ment-ny",
+        "alisa-cafe"
+      ],
+      "photo": "photos/18.jpg"
+    },
+    {
+      "id": "19",
+      "number": 19,
+      "name": "Гоша",
+      "traits": [
+        "man",
+        "driver",
+        "astronomer"
+      ],
+      "photo": "photos/19.jpg"
+    },
+    {
+      "id": "20",
+      "number": 20,
+      "name": "Семен Скалолаз",
+      "traits": [
+        "climber",
+        "man"
+      ],
+      "events": [
+        "apartment-wreck"
+      ]
+    },
+    {
+      "id": "21",
+      "number": 21,
+      "name": "A.M. Вова",
+      "traits": [
+        "boxer",
+        "climber",
+        "man",
+        "raver",
+        "snow",
+        "unemployed",
+        "driver",
+        "cabbage"
+      ],
+      "events": [
+        "shallow-grave",
+        "china-trip"
+      ],
+      "photo": "photos/21.png"
+    },
+    {
+      "id": "22",
+      "number": 22,
+      "name": "Дмитрий Воробьёв",
+      "traits": [
+        "man",
+        "fisher",
+        "metal",
+        "stalker",
+        "alcoholic"
+      ],
+      "photo": "photos/22.png"
+    },
+    {
+      "id": "23",
+      "number": 23,
+      "name": "Даша Грим",
+      "traits": [
+        "girl",
+        "likes-lovelace",
+        "alcoholic"
+      ],
+      "events": [
+        "karaoke",
+        "shallow-grave",
+        "gothic-brawl"
+      ],
+      "photo": "photos/23.png"
+    },
+    {
+      "id": "24",
+      "number": 24,
+      "name": "Ешка Мутаборова",
+      "traits": [
+        "girl",
+        "climber",
+        "metal",
+        "raver",
+        "los",
+        "goth",
+        "kabinka",
+        "troll",
+        "airfryer",
+        "unemployed",
+        "gym",
+        "belyashi",
+        "sber"
+      ],
+      "events": [
+        "china-trip",
+        "stoned-repair"
+      ],
+      "photo": "photos/24.jpg"
+    },
+    {
+      "id": "25",
+      "number": 25,
+      "name": "Иконостас Теплицких",
+      "traits": [
+        "man",
+        "raver",
+        "criminal"
+      ]
+    },
+    {
+      "id": "26",
+      "number": 26,
+      "name": "Дмитрий Олегович",
+      "traits": [
+        "boxer",
+        "man",
+        "humor",
+        "metal",
+        "stalker",
+        "scooter",
+        "driver"
+      ],
+      "photo": "photos/26.jpg"
+    },
+    {
+      "id": "27",
+      "number": 27,
+      "name": "Настя Девяточка",
+      "traits": [
+        "girl",
+        "goth",
+        "alcoholic"
+      ],
+      "photo": "photos/27.png"
+    },
+    {
+      "id": "28",
+      "number": 28,
+      "name": "Владислав Андреев Джиза",
+      "traits": [
+        "metal",
+        "aspid",
+        "liberal",
+        "alcoholic",
+        "boxer",
+        "alt-fan",
+        "man",
+        "gym",
+        "mustache"
+      ],
+      "events": [
+        "shallow-grave",
+        "ment-bday",
+        "ment-ny"
+      ],
+      "photo": "photos/28.png"
+    },
+    {
+      "id": "29",
+      "number": 29,
+      "name": "Лина",
+      "traits": [
+        "girl",
+        "bulk",
+        "airfryer",
+        "alt",
+        "likes-lovelace",
+        "orthodox"
+      ],
+      "events": [
+        "ment-bday"
+      ],
+      "photo": "photos/29.jpg"
+    },
+    {
+      "id": "30",
+      "number": 30,
+      "name": "Фрид",
+      "traits": [
+        "man",
+        "alcoholic"
+      ]
+    },
+    {
+      "id": "31",
+      "number": 31,
+      "name": "Антиквар",
+      "traits": [
+        "man",
+        "alcoholic",
+        "goth"
+      ],
+      "photo": "photos/31.jpg"
+    },
+    {
+      "id": "32",
+      "number": 32,
+      "name": "Эльвира",
+      "traits": [
+        "girl",
+        "metal",
+        "aspid-song",
+        "italian",
+        "belyashi"
+      ],
+      "events": [
+        "bar-fight",
+        "gothic-brawl",
+        "darkness",
+        "alisa-cafe"
+      ],
+      "photo": "photos/32.png"
+    },
+    {
+      "id": "33",
+      "number": 33,
+      "name": "Вика Сказка",
+      "traits": [
+        "girl",
+        "humor"
+      ],
+      "events": [
+        "shashlik"
+      ],
+      "photo": "photos/33.png"
+    },
+    {
+      "id": "34",
+      "number": 34,
+      "name": "Даня",
+      "aliases": [
+        "Немец",
+        "Боб"
+      ],
+      "traits": [
+        "man",
+        "raver",
+        "kabinka",
+        "alt-fan",
+        "grim-founder"
+      ],
+      "events": [
+        "china-trip"
+      ],
+      "photo": "photos/34.jpg"
+    },
+    {
+      "id": "35",
+      "number": 35,
+      "name": "Миша Здоровяк Дискотека",
+      "traits": [
+        "goth",
+        "metal",
+        "gym",
+        "sober",
+        "boxer",
+        "man",
+        "bulk",
+        "snow",
+        "cabbage",
+        "twins",
+        "troll-hater",
+        "likes-plump",
+        "astrologer",
+        "psychologist",
+        "anarchist",
+        "orthodox"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shallow-grave",
+        "darkness",
+        "shashlik",
+        "stoned-repair"
+      ],
+      "photo": "photos/35.jpg"
+    },
+    {
+      "id": "36",
+      "number": 36,
+      "name": "Станислав Прокофьев",
+      "traits": [
+        "cunni",
+        "man",
+        "metal",
+        "alcoholic",
+        "psychologist"
+      ],
+      "events": [
+        "shallow-grave"
+      ],
+      "photo": "photos/36.png"
+    },
+    {
+      "id": "37",
+      "number": 37,
+      "name": "Илюша",
+      "traits": [
+        "man",
+        "alcoholic",
+        "snow",
+        "sber",
+        "raver"
+      ],
+      "events": [
+        "shallow-grave",
+        "china-trip"
+      ],
+      "photo": "photos/37.png"
+    },
+    {
+      "id": "38",
+      "number": 38,
+      "name": "Бабка Сапья",
+      "traits": [
+        "girl",
+        "fem"
+      ],
+      "events": [
+        "shallow-grave",
+        "ment-bday"
+      ],
+      "photo": "photos/38.jpg"
+    },
+    {
+      "id": "39",
+      "number": 39,
+      "name": "Вэл",
+      "traits": [
+        "gym",
+        "los",
+        "patriot",
+        "man",
+        "metal",
+        "philia",
+        "twins",
+        "orthodox",
+        "goth"
+      ],
+      "photo": "photos/39.png"
+    },
+    {
+      "id": "40",
+      "number": 40,
+      "name": "Bastardo Von Morgen",
+      "traits": [
+        "man",
+        "stalker"
+      ]
+    },
+    {
+      "id": "41",
+      "number": 41,
+      "name": "Dmitriy",
+      "traits": [
+        "man",
+        "metal"
+      ]
+    },
+    {
+      "id": "42",
+      "number": 42,
+      "name": "Kat Пикалова",
+      "traits": [
+        "girl",
+        "sober",
+        "metal",
+        "gym"
+      ],
+      "events": [
+        "ment-bday"
+      ],
+      "photo": "photos/42.jpg"
+    },
+    {
+      "id": "43",
+      "number": 43,
+      "name": "Кристина Лакримэ",
+      "traits": [
+        "girl",
+        "alcoholic",
+        "goth"
+      ],
+      "events": [
+        "gothic-brawl"
+      ],
+      "photo": "photos/43.png"
+    },
+    {
+      "id": "44",
+      "number": 44,
+      "name": "Leonid Teterin",
+      "traits": [
+        "man"
+      ]
+    },
+    {
+      "id": "45",
+      "number": 45,
+      "name": "Vera Trish",
+      "traits": [
+        "girl",
+        "emo",
+        "alt"
+      ],
+      "photo": "photos/45.png"
+    },
+    {
+      "id": "46",
+      "number": 46,
+      "name": "Anna Saturn",
+      "traits": [
+        "girl",
+        "alcoholic",
+        "metal",
+        "merciless",
+        "unemployed",
+        "criminal",
+        "astronomer"
+      ],
+      "events": [
+        "bar-fight",
+        "shallow-grave"
+      ],
+      "photo": "photos/46.png"
+    },
+    {
+      "id": "47",
+      "number": 47,
+      "name": "Мальвина",
+      "traits": [
+        "girl",
+        "alt",
+        "raver",
+        "astrologer"
+      ],
+      "events": [
+        "shallow-grave"
+      ],
+      "photo": "photos/47.png"
+    },
+    {
+      "id": "48",
+      "number": 48,
+      "name": "Svartur Móður Jarðar",
+      "traits": [
+        "girl"
+      ]
+    },
+    {
+      "id": "49",
+      "number": 49,
+      "name": "bessnoff",
+      "traits": [
+        "man"
+      ]
+    },
+    {
+      "id": "50",
+      "number": 50,
+      "name": "Александр Слепцов",
+      "traits": [
+        "gym",
+        "man",
+        "snow",
+        "sber"
+      ],
+      "photo": "photos/50.png"
+    },
+    {
+      "id": "51",
+      "number": 51,
+      "name": "Эмилия",
+      "traits": [
+        "girl",
+        "goth"
+      ],
+      "events": [
+        "gothic-brawl"
+      ]
+    },
+    {
+      "id": "52",
+      "number": 52,
+      "name": "Ксюша",
+      "traits": [
+        "girl"
+      ],
+      "photo": "photos/52.png"
+    },
+    {
+      "id": "54",
+      "number": 54,
+      "name": "Персик",
+      "traits": [
+        "man",
+        "raver",
+        "mustache"
+      ],
+      "photo": "photos/54.png"
+    },
+    {
+      "id": "55",
+      "number": 55,
+      "name": "Григорий Сухарев",
+      "traits": [
+        "gym",
+        "man",
+        "offline-goth",
+        "orthodox",
+        "alcoholic",
+        "metal"
+      ],
+      "events": [
+        "shallow-grave"
+      ],
+      "photo": "photos/55.jpg"
+    },
+    {
+      "id": "57",
+      "number": 57,
+      "name": "Слеер",
+      "traits": [
+        "joker",
+        "metal",
+        "man",
+        "satanist",
+        "unwashed"
+      ],
+      "photo": "photos/57.png"
+    },
+    {
+      "id": "58",
+      "number": 58,
+      "name": "Алиса",
+      "traits": [
+        "girl",
+        "slav-expelled",
+        "goth"
+      ],
+      "events": [
+        "karaoke",
+        "gothic-brawl",
+        "alisa-cafe"
+      ],
+      "photo": "photos/58.png"
+    },
+    {
+      "id": "59",
+      "number": 59,
+      "name": "Воеслав",
+      "traits": [
+        "man",
+        "boxer",
+        "metal",
+        "goth",
+        "alcoholic",
+        "slav-expelled"
+      ],
+      "events": [
+        "gothic-brawl",
+        "shallow-grave",
+        "zabroha_fight",
+        "alisa-cafe"
+      ],
+      "photo": "photos/59.jpg"
+    },
+    {
+      "id": "60",
+      "number": 60,
+      "name": "Вика Гречанка",
+      "traits": [
+        "girl",
+        "patriarch",
+        "orthodox",
+        "raver"
+      ],
+      "events": [
+        "shallow-grave"
+      ],
+      "photo": "photos/60.png"
+    },
+    {
+      "id": "62",
+      "number": 62,
+      "name": "Маша Шмель",
+      "traits": [
+        "girl",
+        "raver",
+        "likes-dickpics",
+        "humor"
+      ],
+      "photo": "photos/62.png"
+    }
+  ],
+  "traits": [
+    {
+      "id": "girl",
+      "label": "девушка",
+      "text": "От этой черты считаются ловелас, куннилингвист и фемка. Стоит только там, где пол виден по имени или по словам вроде «рассталась»."
+    },
+    {
+      "id": "man",
+      "label": "мужчина",
+      "text": "Мужчина. Фемка оценивает его на −1. Сам он из‑за этой черты её не оценивает."
+    },
+    {
+      "id": "fem",
+      "label": "фемка",
+      "text": "Оценивает женщин на +1 и мужчин на −1. Мужчинам от этой черты всё равно."
+    },
+    {
+      "id": "patriarch",
+      "label": "патриархат",
+      "text": "Оценивает мужчин на +1, и мужчины оценивают её на +1."
+    },
+    {
+      "id": "lovelace",
+      "label": "ловелас",
+      "text": "Смотрит на девушек на +1. Девушки смотрят на него на −1."
+    },
+    {
+      "id": "metal",
+      "label": "металлист",
+      "text": "Металлисты оценивают друг друга на +1. Тру оценивает на +1 того, у кого из музыки металл без гота и рейва."
+    },
+    {
+      "id": "trve",
+      "label": "тру",
+      "text": "Оценивает на +1 металлистов без гота и рейва и на −1 металлистов с готом или рейвом. За несколько сразу −1 один раз."
+    },
+    {
+      "id": "aspid",
+      "label": "ASPID",
+      "text": "Играют в одной группе. Друг к другу +2, и это складывается с металлом."
+    },
+    {
+      "id": "aspid-song",
+      "label": "песня ASPID",
+      "text": "ASPID сочинили про этого человека песню. Он и каждый участник группы оценивают друг друга на +1. Это не членство в группе: +2 за ASPID отсюда не берётся."
+    },
+    {
+      "id": "aspid-fan",
+      "label": "поклонник ASPID",
+      "text": "Оценивает каждого участника ASPID на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "alt",
+      "label": "альтуха",
+      "text": "Своя тусовка. Альтухи оценивают друг друга на +1."
+    },
+    {
+      "id": "emo",
+      "label": "эмо",
+      "text": "Эмо оценивают друг друга на +1."
+    },
+    {
+      "id": "alt-fan",
+      "label": "любитель альтух",
+      "text": "Оценивает альтух на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "goth",
+      "label": "гот",
+      "text": "Музыкальный жанр. Гот оценивает короля готов на +1. Друг к другу эта черта сама ничего не добавляет. Для Тру это другая музыка: металлист-гот получает от него −1, а не «тру»."
+    },
+    {
+      "id": "fisher",
+      "label": "Рыбак",
+      "text": "Рыбацкий костюм не нравится готичным девочкам. Каждая девушка-гот оценивает его на −1."
+    },
+    {
+      "id": "goth-king",
+      "label": "король готов",
+      "text": "Готы смотрят на него иначе. Каждый гот оценивает короля на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "offline-goth",
+      "label": "Гот без интернета",
+      "text": "Гот, у которого нет интернета. Недолюбливает короля готов на −1: тот не может добавить его в Готочат."
+    },
+    {
+      "id": "humor",
+      "label": "чувство юмора",
+      "text": "Есть чувство юмора. Такой человек оценивает шутника на +1: шутки заходят."
+    },
+    {
+      "id": "joker",
+      "label": "шутник",
+      "text": "Те, у кого есть чувство юмора, оценивают его на +1. Остальным его шутки не нравятся: они оценивают его на −1."
+    },
+    {
+      "id": "gym",
+      "label": "ходит в зал",
+      "text": "Ходит в зал. Босс качалки оценивает такого человека на +1, а сам ходок оценивает босса качалки на +1."
+    },
+    {
+      "id": "gym-boss",
+      "label": "босс качалки",
+      "text": "Оценивает каждого, кто ходит в зал, на +1. Те, кто ходит в зал, оценивают его на +1."
+    },
+    {
+      "id": "los",
+      "label": "лось",
+      "text": "Вместе гуляют по Лосинке. На репутацию этот перк сам не влияет, он только отмечает компанию."
+    },
+    {
+      "id": "stalker",
+      "label": "сталкер",
+      "text": "Любят заброшки. Оценивают друг друга на +1."
+    },
+    {
+      "id": "climber",
+      "label": "скалолаз",
+      "text": "Скалолазы оценивают друг друга на +1."
+    },
+    {
+      "id": "bulk",
+      "label": "массонабор",
+      "text": "Жирные люди притягиваются. Оценивают друг друга на +1."
+    },
+    {
+      "id": "raver",
+      "label": "рейвер",
+      "text": "Музыкальный жанр. Рейверы оценивают друг друга на +1. Для Тру это другая музыка: металлист-рейвер получает от него −1, а не «тру». Если вместе с готом, −1 всё равно один."
+    },
+    {
+      "id": "mustache",
+      "label": "усач",
+      "text": "Усачи оценивают друг друга на +1."
+    },
+    {
+      "id": "snow",
+      "label": "сноубордист",
+      "text": "Сноубордисты оценивают друг друга на +1."
+    },
+    {
+      "id": "philia",
+      "label": "любовь к людям",
+      "text": "Оценивает каждого другого человека на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "cabbage",
+      "label": "капустное братство",
+      "text": "Любят капусту. Оценивают друг друга на +1."
+    },
+    {
+      "id": "twins",
+      "label": "близнецы",
+      "text": "Миша и Вэл настолько похожи, что это буквально один человек."
+    },
+    {
+      "id": "kabinka",
+      "label": "Трое в Кабинке",
+      "text": "Телеграм-канал, который вместе ведут Ешка и Даня. Они оценивают друг друга на +1."
+    },
+    {
+      "id": "boxer",
+      "label": "боксер",
+      "text": "Боксеры оценивают друг друга на +1."
+    },
+    {
+      "id": "fencer",
+      "label": "фехтовальщик",
+      "text": "Фехтовальщик. На репутацию этот перк сам не влияет."
+    },
+    {
+      "id": "photographer",
+      "label": "фотограф",
+      "text": "Фотограф. На репутацию этот перк сам не влияет."
+    },
+    {
+      "id": "cook",
+      "label": "повар",
+      "text": "Повар. На репутацию этот перк сам не влияет."
+    },
+    {
+      "id": "censorship",
+      "label": "цензура",
+      "text": "Постоянно пользуется админ ресурсом и удаляет про себя [данные удалены] и про то что он [данные удалены]. Помогает это не особо."
+    },
+    {
+      "id": "sber",
+      "label": "Сбер",
+      "text": "Те, кто однажды поработал в Сбере, навсегда будут нести в душе любовь к Грефу, а в глазах зелёные огоньки и жажду наживы. Оценивают друг друга на +1."
+    },
+    {
+      "id": "criminal",
+      "label": "уголовник",
+      "text": "Уголовники оценивают друг друга на +1."
+    },
+    {
+      "id": "alcoholic",
+      "label": "алкоголик",
+      "text": "Алкоголики оценивают друг друга на +1 и тех, кто бросил пить, на −1. Те, кто бросил пить, оценивают алкоголика на −1."
+    },
+    {
+      "id": "sober",
+      "label": "бросил пить",
+      "text": "Те, кто бросил, оценивают друг друга на +1 и алкоголиков на −1. Алкоголик оценивает такого человека на −1."
+    },
+    {
+      "id": "liberal",
+      "label": "либераха",
+      "text": "Либерахи оценивают друг друга на +1 и патриотов на −1."
+    },
+    {
+      "id": "patriot",
+      "label": "патриот",
+      "text": "Патриоты оценивают друг друга на +1. Либераха оценивает патриота на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "orthodox",
+      "label": "православный",
+      "text": "Православные оценивают друг друга на +1 и сатанистов на −1."
+    },
+    {
+      "id": "satanist",
+      "label": "сатанист",
+      "text": "Сатанисты оценивают друг друга на +1 и православных на −1."
+    },
+    {
+      "id": "cunni",
+      "label": "куннилингвист",
+      "text": "В глазах каждой девушки у него +1. Его собственный взгляд на девушек эта черта не меняет."
+    },
+    {
+      "id": "troll",
+      "label": "тролль",
+      "text": "Тролли оценивают друг друга на +1."
+    },
+    {
+      "id": "troll-hater",
+      "label": "не любит троллей",
+      "text": "Оценивает троллей на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "likes-plump",
+      "label": "любит пышек",
+      "text": "Оценивает девушек с массонабором на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "airfryer",
+      "label": "аэрогриль",
+      "text": "Купив аэрогриль, вы не можете молчать и всем говорите про свою покупку — это первое правило аэрогрильного клуба."
+    },
+    {
+      "id": "unemployed",
+      "label": "безработный",
+      "text": "Безработный. На репутацию этот перк сам не влияет."
+    },
+    {
+      "id": "italian",
+      "label": "итальянец",
+      "text": "Земляки, приехавшие из Тольятти. Оценивают друг друга на +1."
+    },
+    {
+      "id": "astrologer",
+      "label": "астролог",
+      "text": "Астролог. На репутацию этот перк сам не влияет."
+    },
+    {
+      "id": "astronomer",
+      "label": "астроном",
+      "text": "Астрономы оценивают друг друга на +1."
+    },
+    {
+      "id": "psychologist",
+      "label": "психолог",
+      "text": "Психолог. На репутацию этот перк сам не влияет."
+    },
+    {
+      "id": "slav-founder",
+      "label": "основатель славян",
+      "text": "Создатель и бессменный владелец чата Славян, честь ему и хвала! Каждый оценивает его на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "slav-expelled",
+      "label": "исключен из славян",
+      "text": "Те, кто был выписан из чата Славян, недовольны Игорем за то, что он лишил их такого весёлого общения, и оценивают его на −2. Обратно это само не идёт."
+    },
+    {
+      "id": "grim-founder",
+      "label": "основатель Grim Party",
+      "text": "Создатель лучшей тусы своего времени, организатор кучи походов и вылазок на заброшки. Все, кто застал эти времена, уважают и ценят его на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "anarchist",
+      "label": "анархист",
+      "text": "Не любит основателей и оценивает каждого из них на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "likes-dickpics",
+      "label": "любит дикпики",
+      "text": "Оценивает того, кто кидает дикпики, на +1. Обратно это само не идёт. Те, кто любит дикпики, оценивают друг друга на +1: обсуждают их и пересылают друг другу."
+    },
+    {
+      "id": "likes-lovelace",
+      "label": "любит ловеласов",
+      "text": "Оценивает ловеласа на +1. У девушки с этой чертой обычный −1 за ловеласа не ставится. Обратно это само не идёт."
+    },
+    {
+      "id": "sends-dickpics",
+      "label": "кидает дикпики",
+      "text": "Тот, кто любит дикпики, оценивает его на +1. Остальные женщины оценивают его на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "merciless",
+      "label": "беспощадная",
+      "text": "Не пытайся к ней подкатить, у неё есть молоток! Оценивает куннилингвиста и любителя альтух на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "scooter",
+      "label": "самокатчик",
+      "text": "Самокатчики оценивают друг друга на +1."
+    },
+    {
+      "id": "driver",
+      "label": "водитель",
+      "text": "Оценивает самокатчиков на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "unwashed",
+      "label": "не моется",
+      "text": "Все девушки оценивают такого на −1. Обратно это само не идёт."
+    },
+    {
+      "id": "likes-stink",
+      "label": "любит вонь",
+      "text": "Оценивает того, кто не моется, на +1. Обратно это само не идёт."
+    },
+    {
+      "id": "belyashi",
+      "label": "беляши",
+      "text": "Белый цвет волос рождает сильную ментальную связь. Оценивают друг друга на +1."
+    },
+    {
+      "id": "rot-founder",
+      "label": "основатель гнили",
+      "text": "Налари основала (или захватила, уже не важно) сообщество «Ядерная Гниль» и была там не очень мудрым, но добрым и весёлым владельцем. Там было весело, пока все не спились, а те, кто не спился, перешли в другие сообщества. Участники этого старого сообщества уважают Налари, а она благодарна им за весёлую компанию: взаимный +1."
+    }
+  ],
+  "traitRules": [
+    {
+      "from": "lovelace",
+      "to": "girl",
+      "score": 1,
+      "reason": "ловелас"
+    },
+    {
+      "from": "girl",
+      "fromAlsoLacks": "likes-lovelace",
+      "to": "lovelace",
+      "score": -1,
+      "reason": "ловелас"
+    },
+    {
+      "from": "likes-lovelace",
+      "to": "lovelace",
+      "score": 1,
+      "reason": "любит ловеласов"
+    },
+    {
+      "from": "metal",
+      "to": "metal",
+      "score": 1,
+      "reason": "металлисты"
+    },
+    {
+      "from": "trve",
+      "to": "metal",
+      "alsoLacks": [
+        "goth",
+        "raver"
+      ],
+      "score": 1,
+      "reason": "тру"
+    },
+    {
+      "from": "trve",
+      "to": "goth",
+      "alsoHas": "metal",
+      "score": -1,
+      "reason": "не тру"
+    },
+    {
+      "from": "trve",
+      "to": "raver",
+      "alsoHas": "metal",
+      "alsoLacks": "goth",
+      "score": -1,
+      "reason": "не тру"
+    },
+    {
+      "from": "aspid",
+      "to": "aspid",
+      "score": 2,
+      "reason": "группа ASPID"
+    },
+    {
+      "from": "aspid-song",
+      "to": "aspid",
+      "score": 1,
+      "reason": "песня ASPID"
+    },
+    {
+      "from": "aspid",
+      "to": "aspid-song",
+      "score": 1,
+      "reason": "песня ASPID"
+    },
+    {
+      "from": "aspid-fan",
+      "to": "aspid",
+      "score": 1,
+      "reason": "поклонник ASPID"
+    },
+    {
+      "from": "alt",
+      "to": "alt",
+      "score": 1,
+      "reason": "альтухи"
+    },
+    {
+      "from": "alt-fan",
+      "to": "alt",
+      "score": 1,
+      "reason": "любитель альтух"
+    },
+    {
+      "from": "goth",
+      "to": "goth-king",
+      "score": 1,
+      "reason": "готы уважают короля готов"
+    },
+    {
+      "from": "girl",
+      "fromAlso": "goth",
+      "to": "fisher",
+      "score": -1,
+      "reason": "рыбацкий костюм не нравится готичным девочкам"
+    },
+    {
+      "from": "offline-goth",
+      "to": "goth-king",
+      "score": -1,
+      "reason": "не может добавить в Готочат"
+    },
+    {
+      "from": "humor",
+      "to": "joker",
+      "score": 1,
+      "reason": "шутки зашли"
+    },
+    {
+      "from": "humor",
+      "fromLacks": true,
+      "to": "joker",
+      "score": -1,
+      "reason": "шутки не нравятся"
+    },
+    {
+      "from": "stalker",
+      "to": "stalker",
+      "score": 1,
+      "reason": "сталкеры"
+    },
+    {
+      "from": "gym-boss",
+      "to": "gym",
+      "score": 1,
+      "reason": "босс качалки"
+    },
+    {
+      "from": "gym",
+      "to": "gym-boss",
+      "score": 1,
+      "reason": "уважает босса качалки"
+    },
+    {
+      "from": "alcoholic",
+      "to": "alcoholic",
+      "score": 1,
+      "reason": "алкоголики"
+    },
+    {
+      "from": "sober",
+      "to": "sober",
+      "score": 1,
+      "reason": "бросили пить"
+    },
+    {
+      "from": "sober",
+      "to": "alcoholic",
+      "score": -1,
+      "reason": "бросил пить"
+    },
+    {
+      "from": "alcoholic",
+      "to": "sober",
+      "score": -1,
+      "reason": "алкоголик"
+    },
+    {
+      "from": "liberal",
+      "to": "liberal",
+      "score": 1,
+      "reason": "либерахи"
+    },
+    {
+      "from": "boxer",
+      "to": "boxer",
+      "score": 1,
+      "reason": "боксеры"
+    },
+    {
+      "from": "criminal",
+      "to": "criminal",
+      "score": 1,
+      "reason": "уголовники"
+    },
+    {
+      "from": "climber",
+      "to": "climber",
+      "score": 1,
+      "reason": "скалолазы"
+    },
+    {
+      "from": "bulk",
+      "to": "bulk",
+      "score": 1,
+      "reason": "массонабор"
+    },
+    {
+      "from": "raver",
+      "to": "raver",
+      "score": 1,
+      "reason": "рейверы"
+    },
+    {
+      "from": "emo",
+      "to": "emo",
+      "score": 1,
+      "reason": "эмо"
+    },
+    {
+      "from": "kabinka",
+      "to": "kabinka",
+      "score": 1,
+      "reason": "Трое в Кабинке"
+    },
+    {
+      "from": "mustache",
+      "to": "mustache",
+      "score": 1,
+      "reason": "усачи"
+    },
+    {
+      "from": "snow",
+      "to": "snow",
+      "score": 1,
+      "reason": "сноубордисты"
+    },
+    {
+      "from": "philia",
+      "toAll": true,
+      "score": 1,
+      "reason": "любовь к людям"
+    },
+    {
+      "from": "cabbage",
+      "to": "cabbage",
+      "score": 1,
+      "reason": "капустное братство"
+    },
+    {
+      "from": "liberal",
+      "to": "patriot",
+      "score": -1,
+      "reason": "либераха"
+    },
+    {
+      "from": "patriot",
+      "to": "patriot",
+      "score": 1,
+      "reason": "патриоты"
+    },
+    {
+      "from": "orthodox",
+      "to": "orthodox",
+      "score": 1,
+      "reason": "православные"
+    },
+    {
+      "from": "orthodox",
+      "to": "satanist",
+      "score": -1,
+      "reason": "православный"
+    },
+    {
+      "from": "satanist",
+      "to": "satanist",
+      "score": 1,
+      "reason": "сатанисты"
+    },
+    {
+      "from": "satanist",
+      "to": "orthodox",
+      "score": -1,
+      "reason": "сатанист"
+    },
+    {
+      "from": "girl",
+      "to": "cunni",
+      "score": 1,
+      "reason": "куннилингвист"
+    },
+    {
+      "from": "troll",
+      "to": "troll",
+      "score": 1,
+      "reason": "тролли"
+    },
+    {
+      "from": "troll-hater",
+      "to": "troll",
+      "score": -1,
+      "reason": "не любит троллей"
+    },
+    {
+      "from": "likes-plump",
+      "to": "girl",
+      "alsoHas": "bulk",
+      "score": 1,
+      "reason": "любит пышек"
+    },
+    {
+      "from": "italian",
+      "to": "italian",
+      "score": 1,
+      "reason": "итальянцы"
+    },
+    {
+      "from": "astronomer",
+      "to": "astronomer",
+      "score": 1,
+      "reason": "астрономы"
+    },
+    {
+      "from": "anarchist",
+      "toWord": "основатель",
+      "score": -1,
+      "reason": "не любит основателей"
+    },
+    {
+      "to": "slav-founder",
+      "fromAll": true,
+      "score": 1,
+      "reason": "основатель славян"
+    },
+    {
+      "from": "slav-expelled",
+      "to": "slav-founder",
+      "score": -2,
+      "reason": "исключен из славян"
+    },
+    {
+      "from": "likes-dickpics",
+      "to": "likes-dickpics",
+      "score": 1,
+      "reason": "обсуждают и пересылают дикпики"
+    },
+    {
+      "from": "likes-dickpics",
+      "to": "sends-dickpics",
+      "score": 1,
+      "reason": "любит дикпики"
+    },
+    {
+      "from": "girl",
+      "fromAlsoLacks": "likes-dickpics",
+      "to": "sends-dickpics",
+      "score": -1,
+      "reason": "кидает дикпики"
+    },
+    {
+      "from": "merciless",
+      "to": "cunni",
+      "score": -1,
+      "reason": "беспощадная"
+    },
+    {
+      "from": "merciless",
+      "to": "alt-fan",
+      "score": -1,
+      "reason": "беспощадная"
+    },
+    {
+      "from": "fem",
+      "to": "girl",
+      "score": 1,
+      "reason": "фемка"
+    },
+    {
+      "from": "fem",
+      "to": "man",
+      "score": -1,
+      "reason": "фемка"
+    },
+    {
+      "from": "patriarch",
+      "to": "man",
+      "score": 1,
+      "reason": "патриархат"
+    },
+    {
+      "from": "man",
+      "to": "patriarch",
+      "score": 1,
+      "reason": "патриархат"
+    },
+    {
+      "from": "scooter",
+      "to": "scooter",
+      "score": 1,
+      "reason": "самокатчики"
+    },
+    {
+      "from": "driver",
+      "to": "scooter",
+      "score": -1,
+      "reason": "водитель"
+    },
+    {
+      "from": "girl",
+      "to": "unwashed",
+      "score": -1,
+      "reason": "не моется"
+    },
+    {
+      "from": "likes-stink",
+      "to": "unwashed",
+      "score": 1,
+      "reason": "любит вонь"
+    },
+    {
+      "from": "belyashi",
+      "to": "belyashi",
+      "score": 1,
+      "reason": "беляши"
+    },
+    {
+      "from": "sber",
+      "to": "sber",
+      "score": 1,
+      "reason": "Сбер"
+    }
+  ],
+  "events": [
+    {
+      "id": "bar-fight",
+      "label": "Женская драка в баре",
+      "text": "Эльвира и Anna Saturn подрались в баре. Оценивают друг друга на −1."
+    },
+    {
+      "id": "shashlik",
+      "label": "Жопохватские шашлыки",
+      "text": "Обычные шашлыки в Лосинке на которых ничего не произошло, но по какой-то причине Игоря после них незаслуженно называли Жопохватом, а Вика Сказка была раздражена и недовольна. Вика думала что пришла в культурное общество, но Миша шутил про попы, Игорь пердел, а Тех ржал как сумасшедший и лишь Колос задумчиво поглаживал бороду, ел мясо и смотрел на маленьких веселых людей."
+    },
+    {
+      "id": "technotatu",
+      "label": "ТехноТату",
+      "text": "Слеер решил шутки ради предложить любому кто набьет на груди татуировку Теха 300 тысяч рублей. К его удивлению сразу же согласилось 5 человек. Первой была Оля, она взяла задаток 150 тысяч, а потом они не договорились о том какой именно портрет бить и в итоге она так ничего и не набила. Задаток в 150к отдает уже 2 года, но Слеер надеется что все же отдаст."
+    },
+    {
+      "id": "karaoke",
+      "label": "караоке войны",
+      "text": "Даша и Алиса не поделили очередь в караоке, и разгорелся нешуточный конфликт: тусовка раскололась на несколько частей и образовались новые чаты. Тех помирил участниц, они передумали убивать друг друга, но всё равно недолюбливают. Оценивают друг друга на −2. Алиса благодарна Теху за попытку примирения и оценивает его на +1."
+    },
+    {
+      "id": "gothic-brawl",
+      "label": "Великое готическое побоище",
+      "text": "Вечеринка Goths Undead, на которой случилось 8 драк за вечер. После неё основан бойцовский клуб «Лосиная Муха». Кожин недоволен Воеславом на −1: тот ударил. Колос благодарен Андрею Киселеву на +1: тот посвятил его в готы и добавил в чат. Тех благодарен Даше на +1: та отмазала его от ментов."
+    },
+    {
+      "id": "shallow-grave",
+      "label": "Неглубокая Могила",
+      "text": "Было очень весело: Тех выпил больше всех и радовал друзей своими перформансами, Миша Здоровяк и Вика Китай нарисовали классный грим, Воеслав пытался подружиться с СВД (безуспешно), Мальвина пила пиво с Техом, Киселев отлучался на концерт для своих подданных, Налари показывала сиськи, Эмерлих соблазняла Мента, и только Игорь грустил над сломанным стулом и упавшим Илюшей. Илюша благодарен Вике Китай на +1: та носила его пьяного. Кожин недоволен Илюшей на −1: тот насрал рядом с его палаткой."
+    },
+    {
+      "id": "china-trip",
+      "label": "Поездка в Китай",
+      "text": "Друзьям так понравились эти поездки и то, как Вика переводила, что они стали относиться к ней на +1, а она к ним тоже на +1."
+    },
+    {
+      "id": "darkness",
+      "label": "Тьма",
+      "text": "Фестиваль под Питером, где СВД слушал тру-блэк-метал, а Кожин привёз ему Эльвиру. СВД оценивает Кожина на +1 за то, что тот привёз Эльвиру, и Эльвиру на +1 за то, что она угостила его пивом."
+    },
+    {
+      "id": "ment-bday",
+      "label": "День рождения Мента",
+      "text": "Саша снял огромный дом с бассейном и бильярдом, было очень весело. Сап подралась с Катей Пикаловой: оценивают друг друга на −1. Оля недовольна поведением Сап и оценивает её на −1. Все участники оценивают Мента на +1."
+    },
+    {
+      "id": "apartment-wreck",
+      "label": "Разрушение квартиры",
+      "text": "Аня попросила помочь ей с ремонтом, и Тех с Семеном помогли, но вместо ремонта ей сломали диван, отодрали обои и выкинули кучу вещей. На удивление Ане это и нужно было, поэтому все остались довольны."
+    },
+    {
+      "id": "stoned-repair",
+      "label": "Укуренный ремонт",
+      "text": "Однажды Миша Дискотека и Игорь решили помочь Ешке с ремонтом, но вот неудача: перед этим они крупно развеселились. В итоге они ничего не починили, а просто ходили по квартире, смеялись, тыкали отвертками в розетки и ели еду из холодильника. Парням было очень весело, но Ешка теперь смотрит на этих Handymans со скепсисом и оценивает их на −1."
+    },
+    {
+      "id": "ment-ny",
+      "label": "Новый год у Мента",
+      "text": "Это был прекрасный Новый год, после которого останутся прекрасные воспоминания: СВД отгоняющий мечом ухажеров от своей девушки, Игорь играющий в боулинг бутылками, пляшущий в осколках бутылок Андрей Киселев, сэйбринг от Теха, питье пива по-американски в ванной от Налари, крики «РОССИЯ», порно-самореклама от Элины, снежные покатушки с Рысью по люберецкой куче мусора и проспавший всё веселье Влад — напился и рад. Всем участникам очень понравилась вечеринка, и они оценивают Мента на +1. Мент больше их не позовёт и оценивает всех участников на −1."
+    },
+    {
+      "id": "zabroha_fight",
+      "label": "Бои на заброшке",
+      "text": "Воеслав, Тех и Мент напились абсента и поехали на заброшку, после чего устроили бойцовский клуб на парковке. Все обрели кучу синяков, но, как ни странно, всем участникам это очень понравилось, и они оценивают друг друга на +1."
+    },
+    {
+      "id": "alisa-cafe",
+      "label": "Кафе с Алисой",
+      "text": "Игорь, Алиса, Воеслав и Эльвира пошли в кафе поговорить за жизнь. Жизнь у ребят интересная, поэтому потом пришлось уговаривать Алису забрать заяву на Воеслава. Обычно совместные походы поесть сближают людей, но в данном случае Воеслав и Эльвира были недовольны Алисой и оценивают её на −1, а она их тоже на −1. Игорь недоволен Воеславом и оценивает его на −1. Все уголовники оценивают Алису на −1 за то, что она пишет заявы."
+    }
+  ],
+  "eventRules": [
+    {
+      "from": "bar-fight",
+      "to": "bar-fight",
+      "score": -1,
+      "reason": "подрались в баре"
+    }
+  ],
+  "pairs": [
+    {
+      "from": "34",
+      "to": "4",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "4",
+      "to": "34",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "34",
+      "to": "24",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "24",
+      "to": "34",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "24",
+      "to": "28",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "28",
+      "to": "24",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "24",
+      "to": "18",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "18",
+      "to": "24",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "34",
+      "to": "18",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "18",
+      "to": "34",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "23",
+      "to": "25",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "25",
+      "to": "23",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "23",
+      "to": "21",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "21",
+      "to": "23",
+      "score": 1,
+      "reason": "приятель"
+    },
+    {
+      "from": "33",
+      "to": "4",
+      "score": -1,
+      "reason": "Жопохватские шашлыки",
+      "event": "shashlik"
+    },
+    {
+      "from": "33",
+      "to": "18",
+      "score": -1,
+      "reason": "Жопохватские шашлыки",
+      "event": "shashlik"
+    },
+    {
+      "from": "33",
+      "to": "35",
+      "score": -1,
+      "reason": "Жопохватские шашлыки",
+      "event": "shashlik"
+    },
+    {
+      "from": "33",
+      "to": "10",
+      "score": 1,
+      "reason": "приятели"
+    },
+    {
+      "from": "10",
+      "to": "33",
+      "score": 1,
+      "reason": "приятели"
+    },
+    {
+      "from": "5",
+      "to": "18",
+      "score": 2,
+      "reason": "друзья"
+    },
+    {
+      "from": "18",
+      "to": "5",
+      "score": 2,
+      "reason": "друзья"
+    },
+    {
+      "from": "4",
+      "to": "28",
+      "score": 1,
+      "reason": "друзья"
+    },
+    {
+      "from": "28",
+      "to": "4",
+      "score": 1,
+      "reason": "друзья"
+    },
+    {
+      "from": "59",
+      "to": "43",
+      "score": 2,
+      "reason": "друзья"
+    },
+    {
+      "from": "43",
+      "to": "59",
+      "score": 2,
+      "reason": "друзья"
+    },
+    {
+      "from": "17",
+      "to": "34",
+      "score": -1,
+      "reason": "недолюбливает"
+    },
+    {
+      "from": "57",
+      "to": "17",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "17",
+      "to": "57",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "17",
+      "to": "59",
+      "score": -1,
+      "reason": "троллит"
+    },
+    {
+      "from": "59",
+      "to": "17",
+      "score": -1,
+      "reason": "не поделили девушку"
+    },
+    {
+      "from": "17",
+      "to": "59",
+      "score": -1,
+      "reason": "не поделили девушку"
+    },
+    {
+      "from": "8",
+      "to": "39",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "39",
+      "to": "8",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "10",
+      "to": "59",
+      "score": -1,
+      "reason": "звонит по ночам"
+    },
+    {
+      "from": "10",
+      "to": "59",
+      "score": -1,
+      "reason": "неприязнь"
+    },
+    {
+      "from": "32",
+      "to": "59",
+      "score": -1,
+      "reason": "звонит по ночам"
+    },
+    {
+      "from": "18",
+      "to": "59",
+      "score": -1,
+      "reason": "недолюбливает"
+    },
+    {
+      "from": "46",
+      "to": "55",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "55",
+      "to": "46",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "7",
+      "to": "1",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "1",
+      "to": "7",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "33",
+      "to": "25",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "25",
+      "to": "33",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "4",
+      "to": "50",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "50",
+      "to": "4",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "16",
+      "to": "26",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "26",
+      "to": "16",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "60",
+      "to": "49",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "49",
+      "to": "60",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "14",
+      "to": "31",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "31",
+      "to": "14",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "23",
+      "to": "51",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "51",
+      "to": "23",
+      "score": 2,
+      "reason": "старые друзья"
+    },
+    {
+      "from": "57",
+      "to": "7",
+      "score": 2,
+      "reason": "влюблен"
+    },
+    {
+      "from": "57",
+      "to": "12",
+      "score": -1,
+      "reason": "ТехноТату",
+      "event": "technotatu"
+    },
+    {
+      "from": "23",
+      "to": "58",
+      "score": -2,
+      "reason": "караоке войны",
+      "event": "karaoke"
+    },
+    {
+      "from": "58",
+      "to": "23",
+      "score": -2,
+      "reason": "караоке войны",
+      "event": "karaoke"
+    },
+    {
+      "from": "58",
+      "to": "4",
+      "score": 1,
+      "reason": "помирил после караоке",
+      "event": "karaoke"
+    },
+    {
+      "from": "10",
+      "to": "59",
+      "score": -1,
+      "reason": "ударил на готическом побоище",
+      "event": "gothic-brawl"
+    },
+    {
+      "from": "8",
+      "to": "5",
+      "score": 1,
+      "reason": "посвятил в готы",
+      "event": "gothic-brawl"
+    },
+    {
+      "from": "4",
+      "to": "23",
+      "score": 1,
+      "reason": "отмазала от ментов",
+      "event": "gothic-brawl"
+    },
+    {
+      "from": "59",
+      "to": "58",
+      "score": -1,
+      "reason": "кафе с Алисой",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "58",
+      "to": "59",
+      "score": -1,
+      "reason": "кафе с Алисой",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "32",
+      "to": "58",
+      "score": -1,
+      "reason": "кафе с Алисой",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "58",
+      "to": "32",
+      "score": -1,
+      "reason": "кафе с Алисой",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "18",
+      "to": "59",
+      "score": -1,
+      "reason": "кафе с Алисой",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "25",
+      "to": "58",
+      "score": -1,
+      "reason": "пишет заявы",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "46",
+      "to": "58",
+      "score": -1,
+      "reason": "пишет заявы",
+      "event": "alisa-cafe"
+    },
+    {
+      "from": "18",
+      "to": "59",
+      "score": -1,
+      "reason": "не поделили девушку"
+    },
+    {
+      "from": "59",
+      "to": "18",
+      "score": -1,
+      "reason": "не поделили девушку"
+    },
+    {
+      "from": "37",
+      "to": "2",
+      "score": 1,
+      "reason": "носила пьяного",
+      "event": "shallow-grave"
+    },
+    {
+      "from": "34",
+      "to": "2",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "2",
+      "to": "34",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "24",
+      "to": "2",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "2",
+      "to": "24",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "4",
+      "to": "2",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "2",
+      "to": "4",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "21",
+      "to": "2",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "2",
+      "to": "21",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "37",
+      "to": "2",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "2",
+      "to": "37",
+      "score": 1,
+      "reason": "поездка в Китай",
+      "event": "china-trip"
+    },
+    {
+      "from": "10",
+      "to": "37",
+      "score": -1,
+      "reason": "насрал у палатки",
+      "event": "shallow-grave"
+    },
+    {
+      "from": "17",
+      "to": "10",
+      "score": 1,
+      "reason": "привёз Эльвиру",
+      "event": "darkness"
+    },
+    {
+      "from": "17",
+      "to": "32",
+      "score": 1,
+      "reason": "угостила пивом",
+      "event": "darkness"
+    },
+    {
+      "from": "38",
+      "to": "42",
+      "score": -1,
+      "reason": "подрались на дне рождения",
+      "event": "ment-bday"
+    },
+    {
+      "from": "42",
+      "to": "38",
+      "score": -1,
+      "reason": "подрались на дне рождения",
+      "event": "ment-bday"
+    },
+    {
+      "from": "12",
+      "to": "38",
+      "score": -1,
+      "reason": "недовольна поведением",
+      "event": "ment-bday"
+    },
+    {
+      "from": "4",
+      "to": "1",
+      "score": 1,
+      "reason": "день рождения Мента",
+      "event": "ment-bday"
+    },
+    {
+      "from": "42",
+      "to": "1",
+      "score": 1,
+      "reason": "день рождения Мента",
+      "event": "ment-bday"
+    },
+    {
+      "from": "38",
+      "to": "1",
+      "score": 1,
+      "reason": "день рождения Мента",
+      "event": "ment-bday"
+    },
+    {
+      "from": "28",
+      "to": "1",
+      "score": 1,
+      "reason": "день рождения Мента",
+      "event": "ment-bday"
+    },
+    {
+      "from": "29",
+      "to": "1",
+      "score": 1,
+      "reason": "день рождения Мента",
+      "event": "ment-bday"
+    },
+    {
+      "from": "15",
+      "to": "4",
+      "score": 1,
+      "reason": "разрушение квартиры",
+      "event": "apartment-wreck"
+    },
+    {
+      "from": "4",
+      "to": "15",
+      "score": 1,
+      "reason": "разрушение квартиры",
+      "event": "apartment-wreck"
+    },
+    {
+      "from": "15",
+      "to": "20",
+      "score": 1,
+      "reason": "разрушение квартиры",
+      "event": "apartment-wreck"
+    },
+    {
+      "from": "20",
+      "to": "15",
+      "score": 1,
+      "reason": "разрушение квартиры",
+      "event": "apartment-wreck"
+    },
+    {
+      "from": "24",
+      "to": "35",
+      "score": -1,
+      "reason": "укуренный ремонт",
+      "event": "stoned-repair"
+    },
+    {
+      "from": "24",
+      "to": "18",
+      "score": -1,
+      "reason": "укуренный ремонт",
+      "event": "stoned-repair"
+    },
+    {
+      "from": "4",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "4",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "5",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "5",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "7",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "7",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "16",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "16",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "17",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "17",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "18",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "18",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "28",
+      "to": "1",
+      "score": 1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "1",
+      "to": "28",
+      "score": -1,
+      "reason": "Новый год у Мента",
+      "event": "ment-ny"
+    },
+    {
+      "from": "7",
+      "to": "4",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "4",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "1",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "1",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "35",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "35",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "57",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "57",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "16",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "16",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "34",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "34",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "38",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "38",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "7",
+      "to": "42",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "42",
+      "to": "7",
+      "score": 1,
+      "reason": "ядерная гниль",
+      "trait": "rot-founder"
+    },
+    {
+      "from": "59",
+      "to": "4",
+      "score": 1,
+      "reason": "бои на заброшке",
+      "event": "zabroha_fight"
+    },
+    {
+      "from": "4",
+      "to": "59",
+      "score": 1,
+      "reason": "бои на заброшке",
+      "event": "zabroha_fight"
+    },
+    {
+      "from": "59",
+      "to": "1",
+      "score": 1,
+      "reason": "бои на заброшке",
+      "event": "zabroha_fight"
+    },
+    {
+      "from": "1",
+      "to": "59",
+      "score": 1,
+      "reason": "бои на заброшке",
+      "event": "zabroha_fight"
+    },
+    {
+      "from": "4",
+      "to": "1",
+      "score": 1,
+      "reason": "бои на заброшке",
+      "event": "zabroha_fight"
+    },
+    {
+      "from": "1",
+      "to": "4",
+      "score": 1,
+      "reason": "бои на заброшке",
+      "event": "zabroha_fight"
+    },
+    {
+      "from": "4",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "18",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "24",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "7",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "1",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "35",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "10",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "5",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "57",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "28",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "16",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "29",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "55",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "38",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "54",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "12",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "19",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "11",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "30",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "42",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    },
+    {
+      "from": "40",
+      "to": "34",
+      "score": 1,
+      "reason": "Grim Party",
+      "trait": "grim-founder"
+    }
+  ],
+  "bondPerks": [
+    {
+      "id": "dating",
+      "label": "встречаются",
+      "score": 3,
+      "text": "Сейчас вместе. В обе стороны +3."
+    },
+    {
+      "id": "ex-good",
+      "label": "расстались хорошо",
+      "score": 1,
+      "text": "Раньше были вместе и разошлись без войны. В обе стороны +1."
+    },
+    {
+      "id": "ex-bad",
+      "label": "расстались плохо",
+      "score": -3,
+      "text": "Раньше были вместе и разошлись плохо. В обе стороны −3."
+    }
+  ],
+  "notes": [
+    {
+      "a": "7",
+      "b": "57",
+      "text": "не дала",
+      "score": -1,
+      "from": "57",
+      "to": "7"
+    },
+    {
+      "a": "1",
+      "b": "52",
+      "text": "домогался",
+      "score": -2,
+      "from": "52",
+      "to": "1"
+    },
+    {
+      "a": "57",
+      "b": "52",
+      "text": "домогался",
+      "score": -2,
+      "from": "52",
+      "to": "57"
+    },
+    {
+      "a": "57",
+      "b": "7",
+      "text": "домогался",
+      "score": -2,
+      "from": "7",
+      "to": "57"
+    }
+  ],
+  "bonds": [
+    {
+      "a": "57",
+      "b": "38",
+      "perkId": "ex-bad"
+    },
+    {
+      "a": "58",
+      "b": "18",
+      "perkId": "ex-bad"
+    },
+    {
+      "a": "59",
+      "b": "32",
+      "perkId": "ex-bad"
+    },
+    {
+      "a": "18",
+      "b": "45",
+      "perkId": "ex-good"
+    },
+    {
+      "a": "1",
+      "b": "15",
+      "perkId": "dating"
+    },
+    {
+      "a": "12",
+      "b": "19",
+      "perkId": "dating"
+    },
+    {
+      "a": "2",
+      "b": "4",
+      "perkId": "ex-good"
+    }
+  ]
+}

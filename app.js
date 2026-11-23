@@ -1,5 +1,13 @@
 (function () {
-  var data = window.DATA;
+  fetch("data.json").then(function (response) {
+    if (!response.ok) throw new Error(String(response.status));
+    return response.json();
+  }).then(boot).catch(function () {
+    var count = document.getElementById("count");
+    if (count) count.textContent = "Не удалось загрузить данные";
+  });
+
+  function boot(data) {
   var people = data.people;
   var byId = {};
   var traitById = {};
@@ -1080,4 +1088,5 @@
     return "";
   }
 
-  }());
+  }
+}());
