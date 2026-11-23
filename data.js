@@ -54,7 +54,7 @@ window.DATA = {
     { id: "51", number: 51, name: "Эмилия", traits: ["girl", "goth"], events: ["gothic-brawl"] },
     { id: "52", number: 52, name: "Ксюша", traits: ["girl"], photo: "photos/52.png" },
     { id: "54", number: 54, name: "Персик", traits: ["man", "raver", "mustache"], photo: "photos/54.png" },
-    { id: "55", number: 55, name: "Григорий Сухарев", traits: ["gym", "man", "offline-goth", "orthodox"], events: ["shallow-grave"], photo: "photos/55.jpg" },
+    { id: "55", number: 55, name: "Григорий Сухарев", traits: ["gym", "man", "offline-goth", "orthodox", "alcoholic", "metal"], events: ["shallow-grave"], photo: "photos/55.jpg" },
     { id: "57", number: 57, name: "Слеер", traits: ["joker", "metal", "man", "satanist", "unwashed"], photo: "photos/57.png" },
     { id: "58", number: 58, name: "Алиса", traits: ["girl", "slav-expelled", "goth"], events: ["karaoke", "gothic-brawl", "alisa-cafe"], photo: "photos/58.png" },
     { id: "59", number: 59, name: "Воеслав", traits: ["man", "boxer", "metal", "goth", "alcoholic", "slav-expelled"], events: ["gothic-brawl", "shallow-grave", "zabroha_fight", "alisa-cafe"], photo: "photos/59.jpg" },
