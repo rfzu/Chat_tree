@@ -1,5 +1,5 @@
 {
-  "actual_count": 59,
+  "actual_count": 60,
   "people": [
     {
       "id": "1",
@@ -44,7 +44,8 @@
       ],
       "events": [
         "shallow-grave",
-        "china-trip"
+        "china-trip",
+        "skazka"
       ],
       "photo": "photos/2.png"
     },
@@ -58,7 +59,10 @@
         "driver",
         "girl"
       ],
-      "photo": "photos/3.png"
+      "photo": "photos/3.png",
+      "events": [
+        "skazka"
+      ]
     },
     {
       "id": "4",
@@ -91,7 +95,8 @@
         "apartment-wreck",
         "ment-ny",
         "zabroha_fight",
-        "olegovich-bday"
+        "olegovich-bday",
+        "skazka"
       ],
       "photo": "photos/4.jpg"
     },
@@ -112,7 +117,8 @@
         "gothic-brawl",
         "shallow-grave",
         "ment-ny",
-        "olegovich-bday"
+        "olegovich-bday",
+        "skazka"
       ],
       "photo": "photos/5.jpg"
     },
@@ -124,6 +130,9 @@
         "man",
         "cook",
         "raver"
+      ],
+      "events": [
+        "skazka"
       ]
     },
     {
@@ -169,7 +178,8 @@
       ],
       "events": [
         "gothic-brawl",
-        "shashlik"
+        "shashlik",
+        "skazka"
       ],
       "photo": "photos/8.png"
     },
@@ -405,7 +415,8 @@
       ],
       "events": [
         "shallow-grave",
-        "china-trip"
+        "china-trip",
+        "skazka"
       ],
       "photo": "photos/21.png"
     },
@@ -434,7 +445,8 @@
         "likes-lovelace",
         "alcoholic",
         "cabbage",
-        "philosopher"
+        "philosopher",
+        "metal"
       ],
       "events": [
         "karaoke",
@@ -465,7 +477,8 @@
       ],
       "events": [
         "china-trip",
-        "stoned-repair"
+        "stoned-repair",
+        "skazka"
       ],
       "photo": "photos/24.jpg"
     },
@@ -473,12 +486,15 @@
       "id": "25",
       "number": 25,
       "name": "Иконостас Теплицких",
-      "photo": "photos/stas.jpg",
+      "photo": "photos/25.png",
       "traits": [
         "man",
         "raver",
         "criminal",
         "alcoholic"
+      ],
+      "events": [
+        "skazka"
       ]
     },
     {
@@ -547,7 +563,8 @@
         "raver"
       ],
       "events": [
-        "ment-bday"
+        "ment-bday",
+        "skazka"
       ],
       "photo": "photos/29.jpg"
     },
@@ -600,7 +617,8 @@
         "humor"
       ],
       "events": [
-        "shashlik"
+        "shashlik",
+        "skazka"
       ],
       "photo": "photos/33.png"
     },
@@ -621,7 +639,8 @@
         "sd"
       ],
       "events": [
-        "china-trip"
+        "china-trip",
+        "skazka"
       ],
       "photo": "photos/34.jpg"
     },
@@ -687,7 +706,8 @@
       ],
       "events": [
         "shallow-grave",
-        "china-trip"
+        "china-trip",
+        "skazka"
       ],
       "photo": "photos/37.png"
     },
@@ -824,7 +844,8 @@
         "astrologer"
       ],
       "events": [
-        "shallow-grave"
+        "shallow-grave",
+        "skazka"
       ],
       "photo": "photos/47.png"
     },
@@ -887,7 +908,10 @@
         "raver",
         "mustache"
       ],
-      "photo": "photos/54.png"
+      "photo": "photos/54.png",
+      "events": [
+        "skazka"
+      ]
     },
     {
       "id": "55",
@@ -985,6 +1009,17 @@
         "bdsm"
       ],
       "photo": "photos/62.png"
+    },
+    {
+      "id": "61",
+      "number": 61,
+      "name": "Дмитрий ТриплИпа",
+      "traits": [
+        "man",
+        "metal",
+        "alcoholic"
+      ],
+      "photo": "photos/61.png"
     }
   ],
   "traits": [
@@ -1902,6 +1937,11 @@
       "id": "olegovich-bday",
       "label": "ДР Дмитрия Олеговича",
       "text": "У Дмитрия Олеговича были крутые дни рождения, в ходе которых Белуга лилась рекой, люди путали свои куртки, напивались, танцевали с ножами и падали в торты. Всем участникам очень понравились угощения и перформансы, и они оценивают Дмитрия Олеговича на +1, кроме Миши: нож отобрали, за курткой пришлось возвращаться и одежду от торта отстирывать. Но самое интересное, что этот перформанс переплюнул Дмитрий Воробьёв, и Дмитрий Олегович оценивает его на −2. За что именно, неизвестно, но раз всё предыдущее лишь маленькие проделки, это было что-то эпичное."
+    },
+    {
+      "id": "skazka",
+      "label": "Сказка",
+      "text": "Лучший открытый фестиваль электронной музыки где собираются все объебосы Москвы чтобы приблизиться к коллективному бессознательному в трехдневном рейве. Обычно совпадает с ливневыми дождями и все ползают обжабленные в грязи приближаясь к природе."
     }
   ],
   "eventRules": [
