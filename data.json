@@ -79,7 +79,8 @@
         "troll",
         "unemployed",
         "metal",
-        "sber"
+        "sber",
+        "philosopher"
       ],
       "events": [
         "gothic-brawl",
@@ -432,7 +433,8 @@
         "girl",
         "likes-lovelace",
         "alcoholic",
-        "cabbage"
+        "cabbage",
+        "philosopher"
       ],
       "events": [
         "karaoke",
@@ -471,6 +473,7 @@
       "id": "25",
       "number": 25,
       "name": "Иконостас Теплицких",
+      "photo": "photos/stas.jpg",
       "traits": [
         "man",
         "raver",
@@ -827,7 +830,8 @@
       "number": 48,
       "name": "Svartur Móður Jarðar",
       "traits": [
-        "girl"
+        "girl",
+        "philosopher"
       ]
     },
     {
@@ -974,7 +978,8 @@
         "girl",
         "raver",
         "likes-dickpics",
-        "humor"
+        "humor",
+        "bdsm"
       ],
       "photo": "photos/62.png"
     }
@@ -1354,6 +1359,11 @@
       "id": "rot-founder",
       "label": "основатель гнили",
       "text": "Налари основала (или захватила, уже не важно) сообщество «Ядерная Гниль» и была там не очень мудрым, но добрым и весёлым владельцем. Там было весело, пока все не спились, а те, кто не спился, перешли в другие сообщества. Участники этого старого сообщества уважают Налари, а она благодарна им за весёлую компанию: взаимный +1."
+    },
+    {
+      "id": "philosopher",
+      "label": "философ",
+      "text": "Философы оценивают друг друга на +1."
     }
   ],
   "traitRules": [
@@ -1806,6 +1816,12 @@
       "to": "sber",
       "score": 1,
       "reason": "Сбер"
+    },
+    {
+      "from": "philosopher",
+      "to": "philosopher",
+      "score": 1,
+      "reason": "философы"
     }
   ],
   "events": [
