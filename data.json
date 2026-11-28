@@ -446,7 +446,8 @@
         "alcoholic",
         "cabbage",
         "philosopher",
-        "metal"
+        "metal",
+        "sber"
       ],
       "events": [
         "karaoke",
@@ -1017,7 +1018,8 @@
       "traits": [
         "man",
         "metal",
-        "alcoholic"
+        "alcoholic",
+        "sber"
       ],
       "events": [
         "skazka"
