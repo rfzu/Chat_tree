@@ -477,7 +477,8 @@
       "traits": [
         "man",
         "raver",
-        "criminal"
+        "criminal",
+        "alcoholic"
       ]
     },
     {
@@ -542,7 +543,8 @@
         "airfryer",
         "alt",
         "likes-lovelace",
-        "orthodox"
+        "orthodox",
+        "raver"
       ],
       "events": [
         "ment-bday"
@@ -802,7 +804,8 @@
         "merciless",
         "unemployed",
         "criminal",
-        "astronomer"
+        "astronomer",
+        "perfumer"
       ],
       "events": [
         "bar-fight",
