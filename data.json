@@ -1019,6 +1019,9 @@
         "metal",
         "alcoholic"
       ],
+      "events": [
+        "skazka"
+      ],
       "photo": "photos/61.png"
     }
   ],
